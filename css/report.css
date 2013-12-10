@@ -1,0 +1,56 @@
+.empty {
+	border: 1px #ccc;
+	background-color: none;
+}
+
+.strong {
+	font-weight: 700;
+}
+
+.critical-badge {
+	background-color: #b20000;
+	color: #fff;
+}
+
+.critical{
+	color: #b20000;
+	font-weight: 700;
+}
+
+.high {
+	color: #d9534f;
+	font-weight: 700;
+}
+
+.high-badge {
+	background-color: #d9534f;
+	color: #fff;
+}
+
+.medium {
+	color: #ed9c28;
+	font-weight: 700;
+}
+
+.medium-badge {
+	background-color: #ed9c28;
+	color: #fff;
+}
+
+.low {
+	color: #428BCA;
+	font-weight: 700;
+}
+
+.low-badge {
+	background-color: #428BCA;
+	color: #fff;
+}
+
+pre {font-size: 80%;}
+
+.nav-tabs li.active {font-weight: 700;}
+
+.tab-pane {padding: 15px; padding-bottom: 30px; 
+			border-left: 1px solid #dddddd; border-right: 1px solid #dddddd; border-bottom: 1px solid #dddddd; margin-bottom: 10px;
+			}
