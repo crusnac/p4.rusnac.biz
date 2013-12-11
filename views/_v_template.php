@@ -2,6 +2,9 @@
 <html>
 <head>
 	<title><?php if(isset($title)) echo $title; ?></title>
+	
+	    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
 
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />	
 					
