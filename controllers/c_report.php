@@ -39,11 +39,9 @@ class report_controller extends base_controller {
 			$this->template->content->report = $report;
 			
 			//Send Query data to view to process
-
 			$this->template->stats = $report_stats;
 			$this->template->content->stats = $report_stats;
 			
-
 			//Display the template
 			echo $this->template;
 
