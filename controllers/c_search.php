@@ -2,21 +2,6 @@
 
 class search_controller extends base_controller {
 	
-
-	########### //Process the XML and Send to View ###########
-	public function report($request = NULL) {
-	
-		//Define view parameters			
-		$this->template->content = View::instance('v_search_report');
-		$this->template->title  = "Search Reports";
-
-			
-		//Display the template
-		echo $this->template;
-
-		
-	}// End of Fuction
-	
 	
 	########### //Process the XML and Send to View ###########
 	public function report_json($request = NULL) {
