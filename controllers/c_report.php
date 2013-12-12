@@ -200,5 +200,15 @@ class report_controller extends base_controller {
 			
 	}// End of Function
 	
+	########### //Delete Report ###########
+	public function delete($report = NULL) {
+	
+		echo "Delete Report Function";
+		
+	
+	}//End of Function
+	
+	
+	
 	
 } # End of class
