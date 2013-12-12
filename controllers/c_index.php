@@ -24,8 +24,14 @@ class index_controller extends base_controller {
 	
 	public function reports($page = NULL) {
 		
-			//Set Main Template.
+			//Set Main Template Variables.
+			$this->template = View::instance('_v_index_dashboard_template');
+
 			$this->template->content = View::instance('v_index_reports');
+			
+			# View within a view        
+			$this->template->sidemenu = View::instance('v_index_reports_sidemenu');
+			
 			
 			# Now set the <title> tag
 			$this->template->title = "Hello World";
@@ -39,7 +45,7 @@ class index_controller extends base_controller {
 				
 			
 				//Items per page
-				$items_per_page = 15;
+				$items_per_page = 13;
 				
 				//Total number of reports
 				$total_reports = count($reports);
@@ -75,12 +81,97 @@ class index_controller extends base_controller {
 			$this->template->content->prev = $prev;
 			$this->template->content->next = $next;
 
-
 			      					     		
 			// Render the view
 			echo $this->template;
 
-	} # End of method
+	}//End of Function
+	
+	
+	########### //Process the XML and Send to View ###########
+	public function search($request = NULL) {
+	
+		//Define view parameters			
+		$this->template = View::instance('_v_index_dashboard_template');
+
+		$this->template->content = View::instance('v_index_search');
+			
+		// View within a view        
+		$this->template->sidemenu = View::instance('v_index_reports_sidemenu');
+			
+			
+		//Set Title
+		$this->template->title = "Hello World";
+
+			
+		//Display the template
+		echo $this->template;
+
+		
+	}// End of Fuction
+	
+	
+	########### //Process the XML and Send to View ###########
+	public function report($report = NULL) {
+	
+		//Define view parameters			
+		$this->template = View::instance('_v_index_dashboard_template');
+
+		$this->template->content = View::instance('v_index_report');
+			
+		//Query the Reports table to and return the Array.  Sort of the file timestamp.
+		$q = "select * from reports where reportid = $report";	
+		$report = DB::instance(DB_NAME)->select_rows($q);	
+		
+		$this->template->content->report = $report;
+			
+		// View within a view        
+		$this->template->sidemenu = View::instance('v_index_reports_sidemenu');
+		
+		//Convert filesize to human readable 
+		function formatBytes($size, $precision = 2){
+				$base = log($size) / log(1024);
+				$suffixes = array('', 'k', 'M', 'G', 'T');   
+			
+				return round(pow(1024, $base - floor($base)), $precision) . $suffixes[floor($base)];
+			}
+			
+			
+		//Set Title
+		$this->template->title = "Report Details";
+		
+		
+
+			
+		//Display the template
+		echo $this->template;
+
+		
+	}// End of Fuction
+	
+	########### //Process the XML and Send to View ###########
+	public function statistics() {
+	
+		//Define view parameters			
+		$this->template = View::instance('_v_index_dashboard_template');
+
+		$this->template->content = View::instance('v_index_statistics');
+			
+		// View within a view        
+		$this->template->sidemenu = View::instance('v_index_reports_sidemenu');
+			
+			
+		//Set Title
+		$this->template->title = "Report Details";
+
+			
+		//Display the template
+		echo $this->template;
+
+		
+	}// End of Fuction
+	
+	
 	
 	
 } # End of class
