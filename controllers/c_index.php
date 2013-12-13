@@ -149,7 +149,7 @@ class index_controller extends base_controller {
 		
 	}// End of Fuction
 	
-	########### //Process the XML and Send to View ###########
+	########### //Process Stats  ###########
 	public function statistics() {
 	
 		//Define view parameters			
@@ -162,14 +162,118 @@ class index_controller extends base_controller {
 			
 			
 		//Set Title
-		$this->template->title = "Report Details";
+		$this->template->title = "Report Statistics";
+		
+		
+		//Set Month variables or each month e.x. Jan = 1
+		$current_year = date("Y");
+		$current_month = date("n", strtotime("this month"));
+		$minus_1_month = date("n", strtotime('-1 months'));
+		$minus_2_month = date("n", strtotime('-2 months'));
+		$minus_3_month = date("n", strtotime('-3 months'));
+		$minus_4_month = date("n", strtotime('-4 months'));
+		$minus_5_month = date("n", strtotime('-5 months'));
+		$minus_6_month = date("n", strtotime('-6 months'));
+		
+		//Query the DB
+		$current_month_q = "select * from reports WHERE (start_time LIKE '%$current_month/_/$current_year%') OR (start_time LIKE '%$current_month/__/$current_year%')";
+		
+		$current_month = DB::instance(DB_NAME)->select_rows($current_month_q);		
+		
+		$minus_1_month_q = "select * from reports WHERE (start_time LIKE '%$minus_1_month/_/$current_year%') OR (start_time LIKE '%$minus_1_month/__/$current_year%')";	
+		$minus_1_month = DB::instance(DB_NAME)->select_rows($minus_1_month_q);		
+		
+		$minus_2_month_q = "select * from reports WHERE (start_time LIKE '%$minus_2_month/_/$current_year%') OR (start_time LIKE '%$minus_2_month/__/$current_year%')";	
+		$minus_2_month = DB::instance(DB_NAME)->select_rows($minus_2_month_q);
+		
+		$minus_3_month_q = "select * from reports WHERE (start_time LIKE '%$minus_3_month/_/$current_year%') OR (start_time LIKE '%$minus_3_month/__/$current_year%')";	
+		$minus_3_month = DB::instance(DB_NAME)->select_rows($minus_3_month_q);		
 
-			
+		$minus_4_month_q = "select * from reports WHERE (start_time LIKE '%$minus_4_month/_/$current_year%') OR (start_time LIKE '%$minus_4_month/__/$current_year%')";	
+		$minus_4_month = DB::instance(DB_NAME)->select_rows($minus_4_month_q);		
+
+		$minus_5_month_q = "select * from reports WHERE (start_time LIKE '%$minus_5_month/_/$current_year%') OR (start_time LIKE '%$minus_5_month/__/$current_year%')";	
+		$minus_5_month = DB::instance(DB_NAME)->select_rows($minus_5_month_q);	
+		
+		$minus_6_month_q = "select * from reports WHERE (start_time LIKE '%$minus_6_month/_/$current_year%') OR (start_time LIKE '%$minus_6_month/__/$current_year%')";	
+		$minus_6_month = DB::instance(DB_NAME)->select_rows($minus_6_month_q);		
+		
+		
+		//Send data to stats view to be included in graph
+		$this->template->content->current_month = count($current_month);
+		$this->template->content->minus_1_month = count($minus_1_month);
+		$this->template->content->minus_2_month = count($minus_2_month);
+		$this->template->content->minus_3_month = count($minus_3_month);
+		$this->template->content->minus_4_month = count($minus_4_month);
+		$this->template->content->minus_5_month = count($minus_5_month);
+		$this->template->content->minus_6_month = count($minus_6_month);
+
+
 		//Display the template
 		echo $this->template;
 
 		
 	}// End of Fuction
+	
+	
+	########### //Upload  ###########
+	public function upload() {
+	
+	
+		//Define view parameters			
+		$this->template = View::instance('_v_index_dashboard_template');
+
+		$this->template->content = View::instance('v_index_upload');
+			
+		// View within a view        
+		$this->template->sidemenu = View::instance('v_index_reports_sidemenu');
+			
+			
+		//Set Title
+		$this->template->title = "Upload";
+		
+		
+		//Display the template
+		echo $this->template;
+		
+	
+	
+	}//End of Function
+	
+	
+	public function upload_process() {		
+		
+		Upload::upload($_FILES, "/xml/", array("xml"),$FILES['name']);
+		
+	
+	}//End of Function
+	
+	########### //Users  ###########
+	public function users() {		
+		
+		//Define view parameters			
+		$this->template = View::instance('_v_index_dashboard_template');
+
+		$this->template->content = View::instance('v_index_users');		
+		
+				// View within a view        
+		$this->template->sidemenu = View::instance('v_index_reports_sidemenu');
+	
+			
+		//Set Title
+		$this->template->title = "Users";
+
+			
+		//Display the template
+		echo $this->template;
+		
+	
+	}//End of Function
+	
+	
+	
+	
+	
 	
 	
 	
