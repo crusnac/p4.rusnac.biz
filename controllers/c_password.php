@@ -28,9 +28,9 @@ class password_controller extends base_controller {
 	public function p_reset($token = NULL){
 	
 		//Check to see if the user is logged in.
-			if($this->user) {
-					Router::redirect('/users/profile');	
-			}
+		if($this->user) {
+			Router::redirect('/users/profile');	
+		}
 	
 		//Sanitize _POST
 		$_POST = DB::instance(DB_NAME)->sanitize($_POST);
@@ -69,8 +69,8 @@ class password_controller extends base_controller {
 						
 						//Email TOKEN Functionality
 						$to[]    = Array("name" => $email, "email" => $email);
-						$from    = Array("name" => "Quote Me", "email" => "do-not-reply@rusnac.biz");
-						$subject = "Quote Me - Password Reset";
+						$from    = Array("name" => "APP_NAME", "email" => "do-not-reply@rusnac.biz");
+						$subject = "APP_NAME - Password Reset";
 						
 						//Setup Body View & pass Token to email body
 						$body = View::instance('v_email_p_reset');
