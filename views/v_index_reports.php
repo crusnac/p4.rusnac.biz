@@ -1,3 +1,33 @@
+<?php if(isset($_GET['no-report'])): ?>
+<div class="alert alert-danger fade in">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <strong><i class="fa fa-exclamation-triangle"></i> <strong>The specified report does not exist!</strong>
+</div>
+<?php endif; ?>
+
+<?php if(isset($_GET['no-reports'])): ?>
+<div class="alert alert-warning fade in">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <strong><i class="fa fa-exclamation-triangle"></i> <strong>There are currently no reports available to process</strong>
+</div>
+<?php endif; ?>
+
+<?php if(isset($_GET['report-deleted'])): ?>
+<div class="alert alert-success fade in">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <strong><i class="fa fa-exclamation-triangle"></i> Your report has been deleted</strong>
+</div>
+<?php endif; ?>
+
+<?php if(isset($_GET['processed'])): ?>
+<div class="alert alert-success fade in">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <strong><i class="fa fa-exclamation-triangle"></i> Your report has been processed!</strong>
+</div>
+<?php endif; ?>
+
+
+
 <h1>Reports</h1>
 <table class="table table-hover">
 
