@@ -1,6 +1,6 @@
-<h4>Reset your <?php echo APP_NAME; ?> password</h1>
+<h4>Reset your <?php echo APP_NAME; ?> Password</h1>
 
 <p>
 You can reset you password by following the link below.
 </p>
-<a href="http://p2.rusnac.biz/password/set/<?php echo $token; ?>/">http://p2.rusnac.biz/password/set/<?php echo $token; ?>/</a>
+<a href="<?php print APP_URL; ?><?php echo $token; ?>/"><?php print APP_URL; ?><?php echo $token; ?>/</a>
