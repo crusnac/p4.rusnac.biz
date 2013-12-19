@@ -21,16 +21,23 @@ body {
 #page-wrapper {
   width: 100%;
   padding: 5px 15px;
+  margin-top: 80px;
 }
 
 .navbar-header {
-
 	height: 70px;
 	
 }
 
 .navbar-brand {
 	padding-top: 25px;
+}
+
+.jumbotron {
+	width: 80%;
+	padding-bottom: 40px;
+	padding-top: 10px;
+	
 }
 
 /* Nav Messages */
@@ -58,6 +65,39 @@ body {
 .messages-dropdown .dropdown-menu .message-preview .time {
   font-size: 12px;
 }
+
+
+
+/* Upload */
+
+#holder { border: 10px dashed #ccc; width: 100%; min-height: 300px; margin: 20px auto;}
+#holder.hover { border: 10px dashed #0c0; }
+#holder img { display: block; margin: 10px auto; }
+#holder p { margin: 10px; font-size: 14px; }
+progress { width: 100%; }
+progress:after { content: '%'; }
+.fail { background: #c00; padding: 2px; color: #fff; }
+.hidden { display: none !important;}
+
+progress {
+	background-color: #fff;
+	border: 0;
+	height: 18px;
+	border-radius: 9px;
+}
+
+progress::-webkit-progress-bar {
+	background-color: #f1f1f1;
+	
+}
+progress::-webkit-progress-value {
+	background-color: #008cba;
+
+}
+progress::-moz-progress-bar {
+	height: 30px;
+}
+
 
 
 /* Nav Announcements */
