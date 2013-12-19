@@ -61,9 +61,7 @@ class download_controller extends base_controller {
 			    echo "File does not exists";
 			}		
 		
-	
 		
-	
 	}//End of function
 	
 		
