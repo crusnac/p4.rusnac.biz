@@ -13,8 +13,8 @@ class process_controller extends base_controller {
 		//Check to see if there are any .xml files in the XML directory, if not redirect 
 		if (count(glob($xmldir."*.xml")) === 0 ) { // empty
 		
-			//Redirect to report list with error
-			echo "Directory is Empty";
+			//Redirect to report index with error
+			Router::redirect('/index/reports/?no-reports');
 		}
 		
 			//If Directory exsits.
@@ -122,42 +122,43 @@ class process_controller extends base_controller {
 				            	$vulns_informational = count($informationalVulns);
 							
 														
-							// Insert data into the database for each report.
-							$data = Array(	'request_number' => $request_number, 
-											'scanned_url' => $scanned_url, 
-											'scan_name' => $scan_name, 
-											'created' => $created, 
-											'policy' => $policy, 
-											'start_time' => $start_time,
-											'duration' => $duration,
-											'file_timestamp' => $file_timestamp,
-											'filename' => $filename,
-											'filesize' => $filesize,
-											'vulns_critical' => $vulns_critical,
-											'vulns_high' => $vulns_high,
-											'vulns_medium' => $vulns_medium,
-											'vulns_low' => $vulns_low,
-											'vulns_informational' => $vulns_informational,
-											);
-				
-							// Process files data and insert them into the DB. 
-							$reportid = DB::instance(DB_NAME)->insert('reports', $data);
-							
-							//Move the file to the processed folder
-							rename($xmldir.$file, $xmldir.'processed/'.$filename);		            	
+								// Insert data into the database for each report.
+								$data = Array(	'request_number' => $request_number, 
+												'scanned_url' => $scanned_url, 
+												'scan_name' => $scan_name, 
+												'created' => $created, 
+												'policy' => $policy, 
+												'start_time' => $start_time,
+												'duration' => $duration,
+												'file_timestamp' => $file_timestamp,
+												'filename' => $filename,
+												'filesize' => $filesize,
+												'vulns_critical' => $vulns_critical,
+												'vulns_high' => $vulns_high,
+												'vulns_medium' => $vulns_medium,
+												'vulns_low' => $vulns_low,
+												'vulns_informational' => $vulns_informational,
+												);
+					
+								// Process files data and insert them into the DB. 
+								$reportid = DB::instance(DB_NAME)->insert('reports', $data);
+								
+								//Move the file to the processed folder
+								rename($xmldir.$file, $xmldir.'processed/'.$filename);		            	
 			            	
-						}
+								}
 										        
-			        }
+							}
 			        
 			        //Close Directory Stream
 			        closedir($xml);
+			        
+			        
 		    }
 		}
 			
-			//Redirect to the report list
-			// This needs to be added or maybe not if AJAX is implemented.
-			
+		//Redirect to the report list
+		Router::redirect('/index/reports/?processed');
 
 	}// End of Fuction
 	
