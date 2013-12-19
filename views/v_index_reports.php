@@ -42,6 +42,7 @@
 		<th>Medium</th>
 	</thead>
 	
+	<tbody>
 
 	<?php foreach ($reports as $report): ?>
 		<tr>
@@ -147,12 +148,8 @@
 			    </div><!-- /.modal-content -->
 			  </div><!-- /.modal-dialog -->
 			</div><!-- /.modal -->
-
-		
-		
-		
-		
 	<? endforeach; ?>
+	</tbody>
 
 </table>
 
