@@ -203,9 +203,49 @@ class report_controller extends base_controller {
 	########### //Delete Report ###########
 	public function delete($report = NULL) {
 	
-		echo "Delete Report Function";
+		//Check to make sure user is logged in.
+		if(!$this->user) {
+			Router::redirect('/users/login/');
 		
-	
+				//If logged in Continue...	
+				}else{	
+				
+					//Check to make sure report exsits.
+					$q = "select * from reports where reportid = $report";	
+					$report_check = DB::instance(DB_NAME)->select_rows($q);
+					
+					if(!empty($report_check)){
+					
+							//Set Vars
+							$reportdir = APP_PATH.'xml/processed/';	
+							$htmlreportdir = APP_PATH.'html/';
+							$csvreportdir = APP_PATH.'csv/';
+
+							$report_file = $report_check[0]['filename'];
+						
+							//Delete report from disk
+							unlink($reportdir.$report_file);
+							unlink($htmlreportdir.$report_file.".html");
+							unlink($csvreportdir.$report_file.".csv");
+
+							
+							//Delete the report from DB.
+							DB::instance(DB_NAME)->delete('reports', "WHERE reportid = '$report'");
+							
+							//Redirect with success message
+							Router::redirect('/index/reports/?report-deleted');
+							
+					
+						}else{
+								
+							//Redirect with success message
+							Router::redirect('/index/reports/?no-report');
+							
+						}//End of Else
+			
+			
+			}//End of Else
+		
 	}//End of Function
 	
 	
