@@ -32,14 +32,16 @@
 <table class="table table-hover">
 
 	<thead>
-		<th>Request #</th>
-		<th>Scanned URL</th>
-		<th>Scan Start Time</th>
-				<th></th>
-
-		<th>Critical</th>
-		<th>High</th>
-		<th>Medium</th>
+		<tr>
+			<th>Request #</th>
+			<th>Scanned URL</th>
+			<th>Scan Start Time</th>
+					<th></th>
+	
+			<th>Critical</th>
+			<th>High</th>
+			<th>Medium</th>
+		</tr>
 	</thead>
 	
 	<tbody>
