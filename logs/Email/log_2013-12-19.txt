@@ -1,0 +1,44 @@
+2013-12-19 8:38:19 - INFO --> -------------------------- 
+2013-12-19 8:38:19 - INFO --> Controller/Method: password/p_reset 
+2013-12-19 8:38:19 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY claudiu.rusnac@xerox.com 
+2013-12-19 8:38:19 - INFO --> From: APP_NAME (do-not-reply@rusnac.biz) 
+2013-12-19 8:38:19 - INFO --> To: claudiu@rusnac.net (claudiu@rusnac.net),  
+2013-12-19 8:38:19 - INFO --> CC:  
+2013-12-19 8:38:19 - INFO --> BCC:  
+2013-12-19 8:38:19 - INFO --> Subject: APP_NAME - Password Reset 
+2013-12-19 8:38:19 - INFO --> Body: <h4>Reset your Web Application Assessment Report Management Platform password</h1>
+
+<p>
+You can reset you password by following the link below.
+</p>
+<a href="http://p2.rusnac.biz/password/set/f1ce25b94a9adaca9c9be7bdea95065a217aeccc/">http://p2.rusnac.biz/password/set/f1ce25b94a9adaca9c9be7bdea95065 
+2013-12-19 8:41:16 - INFO --> -------------------------- 
+2013-12-19 8:41:16 - INFO --> Controller/Method: password/p_reset 
+2013-12-19 8:41:16 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY claudiu.rusnac@xerox.com 
+2013-12-19 8:41:16 - INFO --> From: APP_NAME (do-not-reply@rusnac.biz) 
+2013-12-19 8:41:16 - INFO --> To: claudiu.rusnac@xerox.com (claudiu.rusnac@xerox.com),  
+2013-12-19 8:41:16 - INFO --> CC:  
+2013-12-19 8:41:16 - INFO --> BCC:  
+2013-12-19 8:41:16 - INFO --> Subject: APP_NAME - Password Reset 
+2013-12-19 8:41:16 - INFO --> Body: <h4>Reset your Web Application Assessment Report Management Platform Password</h1>
+
+<p>
+You can reset you password by following the link below.
+</p>
+<a href="http://localhost/c5417c04714d389fc06610531268ffdd1998c624/">http://localhost/c5417c04714d389fc06610531268ffdd1998c624/</a>
+ 
+2013-12-19 8:42:22 - INFO --> -------------------------- 
+2013-12-19 8:42:22 - INFO --> Controller/Method: password/p_reset 
+2013-12-19 8:42:22 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY claudiu.rusnac@xerox.com 
+2013-12-19 8:42:22 - INFO --> From: Web Application Assessment Report Management Platform (do-not-reply@rusnac.biz) 
+2013-12-19 8:42:22 - INFO --> To: claudiu.rusnac@xerox.com (claudiu.rusnac@xerox.com),  
+2013-12-19 8:42:22 - INFO --> CC:  
+2013-12-19 8:42:22 - INFO --> BCC:  
+2013-12-19 8:42:22 - INFO --> Subject: Web Application Assessment Report Management Platform - Password Reset 
+2013-12-19 8:42:22 - INFO --> Body: <h4>Reset your Web Application Assessment Report Management Platform Password</h1>
+
+<p>
+You can reset you password by following the link below.
+</p>
+<a href="http://localhost/b93707624839cc8ff6d35fb693f5afb7d7052b54/">http://localhost/b93707624839cc8ff6d35fb693f5afb7d7052b54/</a>
+ 
