@@ -42,3 +42,62 @@ You can reset you password by following the link below.
 </p>
 <a href="http://localhost/b93707624839cc8ff6d35fb693f5afb7d7052b54/">http://localhost/b93707624839cc8ff6d35fb693f5afb7d7052b54/</a>
  
+2013-12-19 8:45:45 - INFO --> -------------------------- 
+2013-12-19 8:45:45 - INFO --> Controller/Method: password/p_reset 
+2013-12-19 8:45:45 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY claudiu.rusnac@xerox.com 
+2013-12-19 8:45:45 - INFO --> From: Web Application Assessment Report Management Platform (do-not-reply@xerox.com) 
+2013-12-19 8:45:45 - INFO --> To: claudiu.rusnac@xerox.com (claudiu.rusnac@xerox.com),  
+2013-12-19 8:45:45 - INFO --> CC:  
+2013-12-19 8:45:45 - INFO --> BCC:  
+2013-12-19 8:45:45 - INFO --> Subject: Web Application Assessment Report Management Platform - Password Reset 
+2013-12-19 8:45:45 - INFO --> Body: <h4>Reset your Web Application Assessment Report Management Platform Password</h1>
+
+<p>
+You can reset you password by following the link below.
+</p>
+<a href="http://localhost//password/set/b4b2d4147027bbe096390a5d4972a7981354b931/">http://localhost//password/set/b4b2d4147027bbe096390a5d4972a7981354b 
+2013-12-19 8:47:43 - INFO --> -------------------------- 
+2013-12-19 8:47:43 - INFO --> Controller/Method: password/p_reset 
+2013-12-19 8:47:43 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY claudiu.rusnac@xerox.com 
+2013-12-19 8:47:43 - INFO --> From: Web Application Assessment Report Management Platform (do-not-reply@xerox.com) 
+2013-12-19 8:47:43 - INFO --> To: claudiu.rusnac@xerox.com (claudiu.rusnac@xerox.com),  
+2013-12-19 8:47:43 - INFO --> CC:  
+2013-12-19 8:47:43 - INFO --> BCC:  
+2013-12-19 8:47:43 - INFO --> Subject: Web Application Assessment Report Management Platform - Password Reset 
+2013-12-19 8:47:43 - INFO --> Body: <h4>Reset your Web Application Assessment Report Management Platform Password</h1>
+
+<p>
+You can reset you password by following the link below.
+</p>
+<a href="http://localhost/password/set/e76587e81131688a36e8b90bc9651696f5ce0baa/">
+
+	http://localhost/password/set/e76587e81131688a36e8b90bc9651696f5ce 
+2013-12-19 8:49:28 - INFO --> -------------------------- 
+2013-12-19 8:49:28 - INFO --> Controller/Method: password/p_reset 
+2013-12-19 8:49:28 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY claudiu.rusnac@xerox.com 
+2013-12-19 8:49:28 - INFO --> From: Web Application Assessment Report Management Platform (do-not-reply@xerox.com) 
+2013-12-19 8:49:28 - INFO --> To: claudiu.rusnac@xerox.com (claudiu.rusnac@xerox.com),  
+2013-12-19 8:49:28 - INFO --> CC:  
+2013-12-19 8:49:28 - INFO --> BCC:  
+2013-12-19 8:49:28 - INFO --> Subject: Web Application Assessment Report Management Platform - Password Reset 
+2013-12-19 8:49:28 - INFO --> Body: <h4>Reset your Web Application Assessment Report Management Platform Password</h1>
+
+<p>
+You can reset you password by following the link below.
+</p>
+<a href="http://localhost/password/set/bb892e4a8a00edefd2115631cb8e059c41a3dfc3/">http://localhost/password/set/bb892e4a8a00edefd2115631cb8e059c41a3dfc 
+2013-12-19 8:50:14 - INFO --> -------------------------- 
+2013-12-19 8:50:14 - INFO --> Controller/Method: password/p_reset 
+2013-12-19 8:50:14 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY claudiu.rusnac@xerox.com 
+2013-12-19 8:50:14 - INFO --> From: Web Application Assessment Report Management Platform (do-not-reply@xerox.com) 
+2013-12-19 8:50:14 - INFO --> To: claudiu.rusnac@xerox.com (claudiu.rusnac@xerox.com),  
+2013-12-19 8:50:14 - INFO --> CC:  
+2013-12-19 8:50:14 - INFO --> BCC:  
+2013-12-19 8:50:14 - INFO --> Subject: Web Application Assessment Report Management Platform - Password Reset 
+2013-12-19 8:50:14 - INFO --> Body: <h4>Reset your Web Application Assessment Report Management Platform Password</h1>
+
+<p>
+You can reset you password by following the link below.
+</p>
+<a href="http://localhost/password/set/bb0b4e026d9875e13aa9532d7207ca1fc7337b45/">Reset My Password</a>
+ 
