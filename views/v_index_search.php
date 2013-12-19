@@ -11,9 +11,6 @@
 <div class="row">
 
 
-
-
-
 <div class="col-md-10">
 	<div id="system-error"></div>
 
