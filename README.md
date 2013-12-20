@@ -14,6 +14,7 @@ There are two sample reports that can be used to demonstrate this concepts:
 <li>sample-reports/1002.xml
 <li>sample-reports/1003.xml
 </ul>
+
 <h2>Feature List</h2>
 <ul>
 <li>Upload Report using dynamic HTML file upload
@@ -24,21 +25,21 @@ There are two sample reports that can be used to demonstrate this concepts:
 <li>Users need to activated - only admin can activate a users.  The data in the system is confidential.
 </ul>
 
-/// - Test Admin Credentials - ///
+<h3>Test Admin Credentials</h3>
 
 Username: claudiu.rusnac@xerox.com
 Password: SecureMe!
 
 
-/// - Credits - ///
+<h3>Credits</h3>
 
-- Upload Feature: 
-	Remy Sharp - http://html5demos.com/dnd-upload
+<strong>Upload Feature:</strong> Remy Sharp - http://html5demos.com/dnd-upload
 
-- Design:
-	- Bootstrap - http://getbootstrap.com
-	- Bootstrap Themes - http://bootswatch.com/yeti/ 
-	- Start Bootstrap - http://startbootstrap.com 'SB Admin' HTML Template by Start Bootstrap
-	- FontAwesome - http://fontawesome.io
-	- Charts - https://developers.google.com/chart/
-	
+<strong>Design:</strong>
+<ul>
+<li>Bootstrap - http://getbootstrap.com
+<li>Bootstrap Themes - http://bootswatch.com/yeti/ 
+<li>Start Bootstrap - http://startbootstrap.com 'SB Admin' HTML Template by Start Bootstrap
+<li>FontAwesome - http://fontawesome.io
+<li>Charts - https://developers.google.com/chart/
+</ul>
