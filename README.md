@@ -10,18 +10,19 @@ To use the tool, the user (which is only an admin), will be able to upload the r
 
 There are two sample reports that can be used to demonstrate this concepts:
 
+<ul>
 <li>sample-reports/1002.xml
 <li>sample-reports/1003.xml
-
+</ul>
 <h2>Feature List</h2>
-
+<ul>
 <li>Upload Report using dynamic HTML file upload
-<li> Process raw XML output and gather stats
+<li>Process raw XML output and gather stats
 <li>Dynamically generates HTML, Non-Interactive HTML, PDF, and CSV output from a raw XML. 
 <li>Dynamic statistics of how many reports have been generated in the last 6 months using google charts
 <li>JSON (JQuery) Dynamic Search Engine.  Users are able to search the database while looking for a specific request number.
 <li>Users need to activated - only admin can activate a users.  The data in the system is confidential.
-
+</ul>
 
 /// - Test Admin Credentials - ///
 
