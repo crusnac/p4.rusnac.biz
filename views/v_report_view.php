@@ -1,7 +1,7 @@
 <?php
 	ini_set('max_execution_time', 9000); //300 seconds = 5 minutes 
 	ini_set('memory_limit', '256M'); // Large XML files need the extra memory
-?>
+	?>
 <!-- Fixed navbar -->
 <div class="navbar navbar-default navbar-fixed-top" role="navigation">
 	<div class="container">
@@ -29,36 +29,23 @@
 	<div class="page-header">
 		<h1>Web Application Assessment Report <span class="label label-default pull-right">#<?php echo $stats[0]['request_number'];?></span></h1>
 	</div>
-
-
 	<div class="row">
-		
 		<div class="col-md-12">
-		
 			<table class="table">
-			
 				<thead>
 					<th>Scanned URL</th>
 					<th>Start Time</th>
 					<th>Duration</th>
 				</thead>
-				
 				<tr>
 					<td><?php echo $stats[0]['scanned_url'];?></td>
 					<td><?php echo $stats[0]['start_time'];?></td>
 					<td><?php echo $stats[0]['duration'];?></td>
-					
 				</tr>
-
 			</table>
-		
 		</div>
-		
 	</div>
-
-
 	<div class="row">
-		
 		<!-- Display Executive Summary Chart - Google Charts -->
 		<div class="col-md-6">
 			<div class="panel-group" id="panel-chart">
@@ -99,7 +86,6 @@
 				</div>
 			</div>
 		</div>
-		
 		<!-- Display Unique Vulns as Executive Summary -->
 		<div class="col-md-6">
 			<div class="panel-group" id="panel-vuln-summary">
@@ -110,7 +96,6 @@
 					<div id="panel-panel-vuln-summary" class="panel-collapse in">
 						<div class="panel-body">
 							<table class="table">
-								
 								<!-- Critical Vulns -->
 								<?php foreach ($unique_vulns as $vulns): ?>
 									<?php if ($vulns['Severity'] == 4): ?>
@@ -179,7 +164,6 @@
 									<th>Vulnerability</th>
 									<th>Severity</th>
 								</thead>
-								
 								<?php //Setup a counter to be use in the anchor tags.
 									$counter = 0; 
 									?>
@@ -189,32 +173,32 @@
 								<?php foreach ($report->Issues->Issue as $issue): ?>
 									<?php $counter ++; ?>
 									<?php if ($issue->Severity == 4): ?>	
-									<tr>
-										<td><a href="#<?php echo $counter; ?>"><span class="critical"><?php print $issue->Name; ?> [<?php print $issue->VulnerabilityID; ?>]</span></a></td>
-										<td><span class="badge strong critical-badge"><i class="fa fa-exclamation-triangle"></i> Critical</span></td>
-									</tr>
+										<tr>
+											<td><a href="#<?php echo $counter; ?>"><span class="critical"><?php print $issue->Name; ?> [<?php print $issue->VulnerabilityID; ?>]</span></a></td>
+											<td><span class="badge strong critical-badge"><i class="fa fa-exclamation-triangle"></i> Critical</span></td>
+										</tr>
 									<?php endif; ?>
 								<? endforeach; ?>
 								
 								<!-- Process High Vulns -->
 								<?php foreach ($report->Issues->Issue as $issue): ?>
-									<?php $counter ++; ?>
+								<?php $counter ++; ?>
 									<?php if ($issue->Severity == 3): ?>	
-									<tr>
-										<td><a href="#<?php echo $counter; ?>"><span class="high"><?php print $issue->Name; ?> [<?php print $issue->VulnerabilityID; ?>]</span></a></td>
-										<td><span class="badge strong high-badge"> High </span></td>
-									</tr>
+										<tr>
+											<td><a href="#<?php echo $counter; ?>"><span class="high"><?php print $issue->Name; ?> [<?php print $issue->VulnerabilityID; ?>]</span></a></td>
+											<td><span class="badge strong high-badge"> High </span></td>
+										</tr>
 									<?php endif; ?>
 								<? endforeach; ?>
 								
 								<!-- Process Medium Vulns -->
 								<?php foreach ($report->Issues->Issue as $issue): ?>
-									<?php $counter ++; ?>
+								<?php $counter ++; ?>
 									<?php if ($issue->Severity == 2): ?>	
-									<tr>
-										<td><a href="#<?php echo $counter; ?>"><span class="medium"><?php print $issue->Name; ?> [<?php print $issue->VulnerabilityID; ?>] </span> </a></td>
-										<td><span class="badge strong medium-badge"> Medium </span></td>
-									</tr>
+										<tr>
+											<td><a href="#<?php echo $counter; ?>"><span class="medium"><?php print $issue->Name; ?> [<?php print $issue->VulnerabilityID; ?>] </span> </a></td>
+											<td><span class="badge strong medium-badge"> Medium </span></td>
+										</tr>
 									<?php endif; ?>
 								<? endforeach; ?>
 								
@@ -246,169 +230,169 @@
 	
 	<!-- Critical Vulns -->
 	<?php foreach ($report->Issues->Issue as $issue): ?>
-		<?php $counter2 ++; ?>
+	<?php $counter2 ++; ?>
 		<?php if ($issue->Severity == 4): ?>
-		<a id="<?php print $counter2; ?>"></a>
-		<h3 class="critical"><span class="badge strong critical-badge"> <i class="fa fa-exclamation-triangle"></i> Critical </span> <?php print $issue->Name; ?></h3>
-		<!-- Nav tabs -->
-		<ul class="nav nav-tabs">
-			<li class="active"><a href="#vulnerability-summary<?php print $counter2; ?>" data-toggle="tab"><i class="fa fa-bug"></i> Vulnerability Summary</a></li>
-			<li><a href="#vulnerability-implication<?php print $counter2; ?>" data-toggle="tab"><i class="fa fa-cog"></i> Vulnerability Implication</a></li>
-			<li><a href="#vulnerability-fix<?php print $counter2; ?>" data-toggle="tab"><i class="fa fa-lightbulb-o"></i> Vulnerability Fix</a></li>
-			<li><a href="#reference-information<?php print $counter2; ?>" data-toggle="tab"><i class="fa fa-info"></i> Reference Info.</a></li>
-			<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-code"></i> Vulnerability Details <b class="caret"></b></a>
-				<ul class="dropdown-menu">
-					<li class=""><a href="#vulnerability-url<?php print $counter2; ?>" data-toggle="tab"><i class="fa fa-code"></i> Vulnerable URL</a></li>
-					<li class=""><a href="#vulnerability-session<?php print $counter2; ?>" data-toggle="tab"><i class="fa fa-code"></i> Vulnerable Session</a></li>
-					<li class=""><a href="#raw-response<?php print $counter2; ?>" data-toggle="tab"><i class="fa fa-code"></i> Raw Response</a></li>
-				</ul>
-			</li>
-		</ul>
-		<!-- Tab panes -->
-		<div class="tab-content">
-			<!-- Vuln Summary -->
-			<div class="tab-pane fade in active" id="vulnerability-summary<?php print $counter2; ?>">
-				<?php print $issue->ReportSection->SectionText; ?>
+			<a id="<?php print $counter2; ?>"></a>
+			<h3 class="critical"><span class="badge strong critical-badge"> <i class="fa fa-exclamation-triangle"></i> Critical </span> <?php print $issue->Name; ?></h3>
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#vulnerability-summary<?php print $counter2; ?>" data-toggle="tab"><i class="fa fa-bug"></i> Vulnerability Summary</a></li>
+				<li><a href="#vulnerability-implication<?php print $counter2; ?>" data-toggle="tab"><i class="fa fa-cog"></i> Vulnerability Implication</a></li>
+				<li><a href="#vulnerability-fix<?php print $counter2; ?>" data-toggle="tab"><i class="fa fa-lightbulb-o"></i> Vulnerability Fix</a></li>
+				<li><a href="#reference-information<?php print $counter2; ?>" data-toggle="tab"><i class="fa fa-info"></i> Reference Info.</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-code"></i> Vulnerability Details <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li class=""><a href="#vulnerability-url<?php print $counter2; ?>" data-toggle="tab"><i class="fa fa-code"></i> Vulnerable URL</a></li>
+						<li class=""><a href="#vulnerability-session<?php print $counter2; ?>" data-toggle="tab"><i class="fa fa-code"></i> Vulnerable Session</a></li>
+						<li class=""><a href="#raw-response<?php print $counter2; ?>" data-toggle="tab"><i class="fa fa-code"></i> Raw Response</a></li>
+					</ul>
+				</li>
+			</ul>
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<!-- Vuln Summary -->
+				<div class="tab-pane fade in active" id="vulnerability-summary<?php print $counter2; ?>">
+					<?php print $issue->ReportSection->SectionText; ?>
+				</div>
+				<!-- Vuln Implication -->
+				<div class="tab-pane" id="vulnerability-implication<?php print $counter2; ?>">
+					<?php print $issue->ReportSection[2]->SectionText; ?>
+				</div>
+				<!-- Vuln Fix -->
+				<div class="tab-pane" id="vulnerability-fix<?php print $counter2; ?>">
+					<?php print $issue->ReportSection[3]->SectionText; ?>
+				</div>
+				<!-- Vuln Ref Info -->
+				<div class="tab-pane" id="reference-information<?php print $counter2; ?>">
+					<?php print $issue->ReportSection[4]->SectionText; ?>
+				</div>
+				<!-- Vuln URL -->
+				<div class="tab-pane" id="vulnerability-url<?php print $counter2; ?>">
+					<pre><?php print htmlspecialchars($issue->URL); ?></pre>
+				</div>
+				<!-- Vuln Session -->
+				<div class="tab-pane" id="vulnerability-session<?php print $counter2; ?>">
+					<pre class="pre-scrollable" style="white-space:pre-line;"><?php print htmlspecialchars($issue->VulnerableSession); ?></pre>
+				</div>
+				<!-- Vuln Raw Response -->
+				<div class="tab-pane" id="raw-response<?php print $counter2; ?>">
+					<pre class="pre-scrollable" style="white-space:pre-line;"><?php print htmlspecialchars($issue->RawResponse); ?></pre>
+				</div>
 			</div>
-			<!-- Vuln Implication -->
-			<div class="tab-pane" id="vulnerability-implication<?php print $counter2; ?>">
-				<?php print $issue->ReportSection[2]->SectionText; ?>
-			</div>
-			<!-- Vuln Fix -->
-			<div class="tab-pane" id="vulnerability-fix<?php print $counter2; ?>">
-				<?php print $issue->ReportSection[3]->SectionText; ?>
-			</div>
-			<!-- Vuln Ref Info -->
-			<div class="tab-pane" id="reference-information<?php print $counter2; ?>">
-				<?php print $issue->ReportSection[4]->SectionText; ?>
-			</div>
-			<!-- Vuln URL -->
-			<div class="tab-pane" id="vulnerability-url<?php print $counter2; ?>">
-				<pre><?php print htmlspecialchars($issue->URL); ?></pre>
-			</div>
-			<!-- Vuln Session -->
-			<div class="tab-pane" id="vulnerability-session<?php print $counter2; ?>">
-				<pre class="pre-scrollable" style="white-space:pre-line;"><?php print htmlspecialchars($issue->VulnerableSession); ?></pre>
-			</div>
-			<!-- Vuln Raw Response -->
-			<div class="tab-pane" id="raw-response<?php print $counter2; ?>">
-				<pre class="pre-scrollable" style="white-space:pre-line;"><?php print htmlspecialchars($issue->RawResponse); ?></pre>
-			</div>
-		</div>
-		<!-- End Tab panes -->
+			<!-- End Tab panes -->
 		<?php endif; ?>
 	<? endforeach; ?>
 	
 	<!-- High Vulns -->
 	<?php foreach ($report->Issues->Issue as $issue): ?>
-		<?php $counter2 ++; ?>
+	<?php $counter2 ++; ?>
 		<?php if ($issue->Severity == 3): ?>
-		<a id="<?php print $counter2; ?>"></a>
-		<h3 class="high"><span class="badge strong high-badge"> High </span> <?php print $issue->Name; ?></h3>
-		<!-- Nav tabs -->
-		<ul class="nav nav-tabs">
-			<li class="active"><a href="#vulnerability-summary<?php print $counter2; ?>" data-toggle="tab"><i class="fa fa-bug"></i> Vulnerability Summary</a></li>
-			<li><a href="#vulnerability-implication<?php print $counter2; ?>" data-toggle="tab"><i class="fa fa-cog"></i> Vulnerability Implication</a></li>
-			<li><a href="#vulnerability-fix<?php print $counter2; ?>" data-toggle="tab"><i class="fa fa-lightbulb-o"></i> Vulnerability Fix</a></li>
-			<li><a href="#reference-information<?php print $counter2; ?>" data-toggle="tab"><i class="fa fa-info"></i> Reference Info.</a></li>
-			<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-code"></i> Vulnerability Details <b class="caret"></b></a>
-				<ul class="dropdown-menu">
-					<li class=""><a href="#vulnerability-url<?php print $counter2; ?>" data-toggle="tab"><i class="fa fa-code"></i> Vulnerable URL</a></li>
-					<li class=""><a href="#vulnerability-session<?php print $counter2; ?>" data-toggle="tab"><i class="fa fa-code"></i> Vulnerable Session</a></li>
-					<li class=""><a href="#raw-response<?php print $counter2; ?>" data-toggle="tab"><i class="fa fa-code"></i> Raw Response</a></li>
-				</ul>
-			</li>
-		</ul>
-		<!-- Tab panes -->
-		<div class="tab-content">
-			<!-- Vuln Summary -->
-			<div class="tab-pane fade in active" id="vulnerability-summary<?php print $counter2; ?>">
-				<?php print $issue->ReportSection->SectionText; ?>
+			<a id="<?php print $counter2; ?>"></a>
+			<h3 class="high"><span class="badge strong high-badge"> High </span> <?php print $issue->Name; ?></h3>
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#vulnerability-summary<?php print $counter2; ?>" data-toggle="tab"><i class="fa fa-bug"></i> Vulnerability Summary</a></li>
+				<li><a href="#vulnerability-implication<?php print $counter2; ?>" data-toggle="tab"><i class="fa fa-cog"></i> Vulnerability Implication</a></li>
+				<li><a href="#vulnerability-fix<?php print $counter2; ?>" data-toggle="tab"><i class="fa fa-lightbulb-o"></i> Vulnerability Fix</a></li>
+				<li><a href="#reference-information<?php print $counter2; ?>" data-toggle="tab"><i class="fa fa-info"></i> Reference Info.</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-code"></i> Vulnerability Details <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li class=""><a href="#vulnerability-url<?php print $counter2; ?>" data-toggle="tab"><i class="fa fa-code"></i> Vulnerable URL</a></li>
+						<li class=""><a href="#vulnerability-session<?php print $counter2; ?>" data-toggle="tab"><i class="fa fa-code"></i> Vulnerable Session</a></li>
+						<li class=""><a href="#raw-response<?php print $counter2; ?>" data-toggle="tab"><i class="fa fa-code"></i> Raw Response</a></li>
+					</ul>
+				</li>
+			</ul>
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<!-- Vuln Summary -->
+				<div class="tab-pane fade in active" id="vulnerability-summary<?php print $counter2; ?>">
+					<?php print $issue->ReportSection->SectionText; ?>
+				</div>
+				<!-- Vuln Implication -->
+				<div class="tab-pane" id="vulnerability-implication<?php print $counter2; ?>">
+					<?php print $issue->ReportSection[2]->SectionText; ?>
+				</div>
+				<!-- Vuln Fix -->
+				<div class="tab-pane" id="vulnerability-fix<?php print $counter2; ?>">
+					<?php print $issue->ReportSection[3]->SectionText; ?>
+				</div>
+				<!-- Vuln Ref Info -->
+				<div class="tab-pane" id="reference-information<?php print $counter2; ?>">
+					<?php print $issue->ReportSection[4]->SectionText; ?>
+				</div>
+				<!-- Vuln URL -->
+				<div class="tab-pane" id="vulnerability-url<?php print $counter2; ?>">
+					<pre><?php print htmlspecialchars($issue->URL); ?></pre>
+				</div>
+				<!-- Vuln Session -->
+				<div class="tab-pane" id="vulnerability-session<?php print $counter2; ?>">
+					<pre class="pre-scrollable" style="white-space:pre-line;"><?php print htmlspecialchars($issue->VulnerableSession); ?></pre>
+				</div>
+				<!-- Vuln Raw Response -->
+				<div class="tab-pane" id="raw-response<?php print $counter2; ?>">
+					<pre class="pre-scrollable" style="white-space:pre-line;"><?php print htmlspecialchars($issue->RawResponse); ?></pre>
+				</div>
 			</div>
-			<!-- Vuln Implication -->
-			<div class="tab-pane" id="vulnerability-implication<?php print $counter2; ?>">
-				<?php print $issue->ReportSection[2]->SectionText; ?>
-			</div>
-			<!-- Vuln Fix -->
-			<div class="tab-pane" id="vulnerability-fix<?php print $counter2; ?>">
-				<?php print $issue->ReportSection[3]->SectionText; ?>
-			</div>
-			<!-- Vuln Ref Info -->
-			<div class="tab-pane" id="reference-information<?php print $counter2; ?>">
-				<?php print $issue->ReportSection[4]->SectionText; ?>
-			</div>
-			<!-- Vuln URL -->
-			<div class="tab-pane" id="vulnerability-url<?php print $counter2; ?>">
-				<pre><?php print htmlspecialchars($issue->URL); ?></pre>
-			</div>
-			<!-- Vuln Session -->
-			<div class="tab-pane" id="vulnerability-session<?php print $counter2; ?>">
-				<pre class="pre-scrollable" style="white-space:pre-line;"><?php print htmlspecialchars($issue->VulnerableSession); ?></pre>
-			</div>
-			<!-- Vuln Raw Response -->
-			<div class="tab-pane" id="raw-response<?php print $counter2; ?>">
-				<pre class="pre-scrollable" style="white-space:pre-line;"><?php print htmlspecialchars($issue->RawResponse); ?></pre>
-			</div>
-		</div>
-		<!-- End Tab panes -->
+			<!-- End Tab panes -->
 		<?php endif; ?>
 	<? endforeach; ?>
 	
 	<!-- Medium Vulns -->
 	<?php foreach ($report->Issues->Issue as $issue): ?>
-		<?php $counter2 ++; ?>
+	<?php $counter2 ++; ?>
 		<?php if ($issue->Severity == 2): ?>
-		<a id="<?php print $counter2; ?>"></a>
-		<h3 class="medium"><span class="badge strong medium-badge"> Medium </span> <?php print $issue->Name; ?></h3>
-		<!-- Nav tabs -->
-		<ul class="nav nav-tabs">
-			<li class="active"><a href="#vulnerability-summary<?php print $counter2; ?>" data-toggle="tab"><i class="fa fa-bug"></i> Vulnerability Summary</a></li>
-			<li><a href="#vulnerability-implication<?php print $counter2; ?>" data-toggle="tab"><i class="fa fa-cog"></i> Vulnerability Implication</a></li>
-			<li><a href="#vulnerability-fix<?php print $counter2; ?>" data-toggle="tab"><i class="fa fa-lightbulb-o"></i> Vulnerability Fix</a></li>
-			<li><a href="#reference-information<?php print $counter2; ?>" data-toggle="tab"><i class="fa fa-info"></i> Reference Info.</a></li>
-			<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-code"></i> Vulnerability Details <b class="caret"></b></a>
-				<ul class="dropdown-menu">
-					<li class=""><a href="#vulnerability-url<?php print $counter2; ?>" data-toggle="tab"><i class="fa fa-code"></i> Vulnerable URL</a></li>
-					<li class=""><a href="#vulnerability-session<?php print $counter2; ?>" data-toggle="tab"><i class="fa fa-code"></i> Vulnerable Session</a></li>
-					<li class=""><a href="#raw-response<?php print $counter2; ?>" data-toggle="tab"><i class="fa fa-code"></i> Raw Response</a></li>
-				</ul>
-			</li>
-		</ul>
-		<!-- Tab panes -->
-		<div class="tab-content">
-			<!-- Vuln Summary -->
-			<div class="tab-pane fade in active" id="vulnerability-summary<?php print $counter2; ?>">
-				<?php print $issue->ReportSection->SectionText; ?>
+			<a id="<?php print $counter2; ?>"></a>
+			<h3 class="medium"><span class="badge strong medium-badge"> Medium </span> <?php print $issue->Name; ?></h3>
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#vulnerability-summary<?php print $counter2; ?>" data-toggle="tab"><i class="fa fa-bug"></i> Vulnerability Summary</a></li>
+				<li><a href="#vulnerability-implication<?php print $counter2; ?>" data-toggle="tab"><i class="fa fa-cog"></i> Vulnerability Implication</a></li>
+				<li><a href="#vulnerability-fix<?php print $counter2; ?>" data-toggle="tab"><i class="fa fa-lightbulb-o"></i> Vulnerability Fix</a></li>
+				<li><a href="#reference-information<?php print $counter2; ?>" data-toggle="tab"><i class="fa fa-info"></i> Reference Info.</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-code"></i> Vulnerability Details <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li class=""><a href="#vulnerability-url<?php print $counter2; ?>" data-toggle="tab"><i class="fa fa-code"></i> Vulnerable URL</a></li>
+						<li class=""><a href="#vulnerability-session<?php print $counter2; ?>" data-toggle="tab"><i class="fa fa-code"></i> Vulnerable Session</a></li>
+						<li class=""><a href="#raw-response<?php print $counter2; ?>" data-toggle="tab"><i class="fa fa-code"></i> Raw Response</a></li>
+					</ul>
+				</li>
+			</ul>
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<!-- Vuln Summary -->
+				<div class="tab-pane fade in active" id="vulnerability-summary<?php print $counter2; ?>">
+					<?php print $issue->ReportSection->SectionText; ?>
+				</div>
+				<!-- Vuln Implication -->
+				<div class="tab-pane" id="vulnerability-implication<?php print $counter2; ?>">
+					<?php print $issue->ReportSection[2]->SectionText; ?>
+				</div>
+				<!-- Vuln Fix -->
+				<div class="tab-pane" id="vulnerability-fix<?php print $counter2; ?>">
+					<?php print $issue->ReportSection[3]->SectionText; ?>
+				</div>
+				<!-- Vuln Ref Info -->
+				<div class="tab-pane" id="reference-information<?php print $counter2; ?>">
+					<?php print $issue->ReportSection[4]->SectionText; ?>
+				</div>
+				<!-- Vuln URL -->
+				<div class="tab-pane" id="vulnerability-url<?php print $counter2; ?>">
+					<pre><?php print htmlspecialchars($issue->URL); ?></pre>
+				</div>
+				<!-- Vuln Session -->
+				<div class="tab-pane" id="vulnerability-session<?php print $counter2; ?>">
+					<pre class="pre-scrollable" style="white-space:pre-line;"><?php print htmlspecialchars($issue->VulnerableSession); ?></pre>
+				</div>
+				<!-- Vuln Raw Response -->
+				<div class="tab-pane" id="raw-response<?php print $counter2; ?>">
+					<pre class="pre-scrollable" style="white-space:pre-line;"><?php print htmlspecialchars($issue->RawResponse); ?></pre>
+				</div>
 			</div>
-			<!-- Vuln Implication -->
-			<div class="tab-pane" id="vulnerability-implication<?php print $counter2; ?>">
-				<?php print $issue->ReportSection[2]->SectionText; ?>
-			</div>
-			<!-- Vuln Fix -->
-			<div class="tab-pane" id="vulnerability-fix<?php print $counter2; ?>">
-				<?php print $issue->ReportSection[3]->SectionText; ?>
-			</div>
-			<!-- Vuln Ref Info -->
-			<div class="tab-pane" id="reference-information<?php print $counter2; ?>">
-				<?php print $issue->ReportSection[4]->SectionText; ?>
-			</div>
-			<!-- Vuln URL -->
-			<div class="tab-pane" id="vulnerability-url<?php print $counter2; ?>">
-				<pre><?php print htmlspecialchars($issue->URL); ?></pre>
-			</div>
-			<!-- Vuln Session -->
-			<div class="tab-pane" id="vulnerability-session<?php print $counter2; ?>">
-				<pre class="pre-scrollable" style="white-space:pre-line;"><?php print htmlspecialchars($issue->VulnerableSession); ?></pre>
-			</div>
-			<!-- Vuln Raw Response -->
-			<div class="tab-pane" id="raw-response<?php print $counter2; ?>">
-				<pre class="pre-scrollable" style="white-space:pre-line;"><?php print htmlspecialchars($issue->RawResponse); ?></pre>
-			</div>
-		</div>
-		<!-- End Tab panes -->
+			<!-- End Tab panes -->
 		<?php endif; ?>
 	<? endforeach; ?>
 </div>
@@ -417,7 +401,6 @@
 	<div class="container">
 		<p class="text-muted">
 			<strong>XEROX Confidential | </strong>Web Application Assessment Report for Request #<?php echo $stats[0]['request_number'];?> | Report Generated: <?php echo date("F j, Y @ g:i a"); ?>
-			
 		</p>
 	</div>
 </div>
