@@ -1,8 +1,8 @@
-Web Application Assessment Report Management Platform
+<h1>Web Application Assessment Report Management Platform</h1>
 
-The Web Application Assessment Report Management Platform application is a web application report engine used to generate HTML, CSV, and PDF reports from raw XML files that are generated from the WebInspect web application scanner.  
+The Web Application Assessment Report Management Platform application is a web application report engine used to generate HTML, CSV, and PDF reports from raw XML files that are generated from the <a href=“http://www8.hp.com/us/en/software-solutions/software.html?compURI=1341991#.UrSh6XnWJpc”>HP WebInspect web application scanner</a>.  
 
-WebInpsect is a web application vulnerability scanner that produces a XML output. The XML output is a list of vulnerabilities and the details associated to remediate each respective vulnerability.
+HP WebInpsect is a web application vulnerability scanner that produces a XML output. The XML output is a list of vulnerabilities and the details associated to remediate each respective vulnerability.
 
 I developed this project to be used by our users at Xerox Corp.  Our users needed a easy way to view the vulnerabilities in multiple formats.  The current report engine is very basic and only produces a list in PDF which is not very intuitive.
 
@@ -10,17 +10,17 @@ To use the tool, the user (which is only an admin), will be able to upload the r
 
 There are two sample reports that can be used to demonstrate this concepts:
 
-- Report 1 - 
-- Report 2 - 
+<li>Report 1: samples/
+<li>Report 2 - 
 
-/// - Feature List - ///
+<h2>Feature List</h2>
 
-	- Upload Report using dynamic HTML file upload
-	- Process raw XML output and gather stats
-	- Dynamically generates HTML, Non-Interactive HTML, PDF, and CSV output from a raw XML. 
-	- Dynamic statistics of how many reports have been generated in the last 6 months using google charts
-	- JSON (JQuery) Dynamic Search Engine.  Users are able to search the database while looking for a specific request number.
-	- Users need to activated - only admin can activate a users.  The data in the system is confidential.
+<li>Upload Report using dynamic HTML file upload
+<li> Process raw XML output and gather stats
+<li>Dynamically generates HTML, Non-Interactive HTML, PDF, and CSV output from a raw XML. 
+<li>Dynamic statistics of how many reports have been generated in the last 6 months using google charts
+<li>JSON (JQuery) Dynamic Search Engine.  Users are able to search the database while looking for a specific request number.
+<li>Users need to activated - only admin can activate a users.  The data in the system is confidential.
 
 
 /// - Test Admin Credentials - ///
