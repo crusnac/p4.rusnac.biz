@@ -26,10 +26,10 @@ There are two sample reports that can be used to demonstrate this concepts:
 </ul>
 
 <h3>Test Admin Credentials</h3>
-
-Username: claudiu.rusnac@xerox.com
-Password: SecureMe!
-
+<ul>
+<li><strong>Username:</strong> system.admin@do-not-reply.com
+<li><strong>Password:</strong> SecureMe!
+</ul>
 
 <h3>Credits</h3>
 
@@ -42,4 +42,11 @@ Password: SecureMe!
 <li>Start Bootstrap - http://startbootstrap.com 'SB Admin' HTML Template by Start Bootstrap
 <li>FontAwesome - http://fontawesome.io
 <li>Charts - https://developers.google.com/chart/
+</ul>
+
+<h4>Project Notes</h4>
+<ul>
+
+<li>On generated report HTML/PDF pages, there are some internal styling and javascript to aide in the chart creation and support styling of specific elements when the user downloads a specific report.  This was done intentionally. 
+
 </ul>
