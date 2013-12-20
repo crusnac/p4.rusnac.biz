@@ -10,8 +10,8 @@ To use the tool, the user (which is only an admin), will be able to upload the r
 
 There are two sample reports that can be used to demonstrate this concepts:
 
-<li>Report 1: samples/
-<li>Report 2 - 
+<li>sample-reports/1002.xml
+<li>sample-reports/1003.xml
 
 <h2>Feature List</h2>
 
