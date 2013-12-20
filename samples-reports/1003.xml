@@ -1,0 +1,2103 @@
+﻿<Scan><Name>1003_POST2_http://zero.webappsecurity.com/admin/</Name><PolicyName>Standard</PolicyName><StartTime>12/20/2013 11:25:29 AM</StartTime><Duration>00:03:49.8110292</Duration><Issues><Issue><CheckTypeID>Best Practices</CheckTypeID><EngineType>CUSTOM</EngineType><URL>http://zero.webappsecurity.com:80/admin/</URL><Scheme>http</Scheme><Host>zero.webappsecurity.com</Host><Port>80</Port><AttackSession null="1" /><VulnerableSession><![CDATA[GET /admin/ HTTP/1.1
+Accept: */*
+Pragma: no-cache
+User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.2.18) Gecko/20110614 Firefox/3.6.18 (.NET CLR 3.5.30729)
+Host: zero.webappsecurity.com
+Connection: Keep-Alive
+X-WIPP: AscVersion=10.1.177.0
+X-Scan-Memo: Category="Crawl"; SID="B09C4D5CC22F10C01D9D84418780B93D"; SessionType="ExternalAddedToCrawl"; CrawlType="None"; AttackType="None"; OriginatingEngineID="00000000-0000-0000-0000-000000000000"; Method="CreateStateRequest"; ThreadId="139"; ThreadType="CrawlBreadthFirstDBReader"; 
+X-RequestManager-Memo: StateID="659"; ID="1e0e1f84-2b10-41b4-a203-4da7a03f8f59"; 
+X-Request-Memo: ID="bfe50c6a-e81a-4b20-9b7f-830b97e58a09"; ThreadId="110"; 
+Cookie: CustomCookie=WebInspect90497ZX733C3C9FC85D468A82759DDB55594A61YF788
+
+]]></VulnerableSession><TriggerSession null="1" /><DetectedInSession null="1" /><VulnerabilityID>5597</VulnerabilityID><Severity>0</Severity><Name>Form Auto Complete Active</Name><ReportSection><Name>Summary</Name><SectionText><![CDATA[Most recent browsers have features that will save form field content entered by users and then automatically complete form entry the next time the fields are encountered. This feature is enabled by default and could leak sensitive information since it is stored on the hard drive of the user. The risk of this issue is greatly increased if users are accessing the application from a shared environment. Recommendations include setting autocomplete to "off" on all your forms.]]></SectionText></ReportSection><ReportSection><Name>Implication</Name><SectionText></SectionText></ReportSection><ReportSection><Name>Execution</Name><SectionText></SectionText></ReportSection><ReportSection><Name>Fix</Name><SectionText></SectionText></ReportSection><ReportSection><Name>Reference Info</Name><SectionText><![CDATA[<br /><b>Microsoft:</b><br /><a href="http://msdn.microsoft.com/en-us/library/ms533032(VS.85).aspx#security">Autocomplete Security</a>]]></SectionText></ReportSection><RawResponse><![CDATA[HTTP/1.1 200 OK
+Date: Fri, 20 Dec 2013 19:27:05 GMT
+Server: Apache/2.2.22 (Ubuntu)
+Cache-Control: no-cache, max-age=0, must-revalidate, no-store
+Content-Language: en-US
+Vary: Accept-Encoding
+Content-Type: text/html;charset=UTF-8
+Connection: Keep-Alive
+Content-Length: 6602
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Zero - Admin - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <link type="text/css" rel="stylesheet" href="/resources/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="/resources/css/font-awesome.css"/>
+    <link type="text/css" rel="stylesheet" href="/resources/css/main.css"/>
+
+    <script src="/resources/js/jquery-1.8.2.min.js"></script>
+        <script src="/resources/js/bootstrap.min.js"></script>
+
+    <script src="/resources/js/placeholders.min.js"></script>
+    <script type="text/javascript">
+        Placeholders.init({
+            live: true, // Apply to future and modified elements too
+            hideOnFocus: true // Hide the placeholder when the element receives focus
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ajaxError(function errorHandler(event, xhr, ajaxOptions, thrownError) {
+            if (xhr.status == 403) {
+                window.location.reload();
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a href="/index.html" class="brand">Zero Bank</a>
+
+                <div>
+                    <ul class="nav float-right">
+                        <li>    <form action="/search.html"
+          class="navbar-search pull-right" style="padding-right: 20px">
+        <input type="text" id="searchTerm" name="searchTerm" class="search-query" placeholder="Search"/>
+    </form>
+</li>
+                        <li>
+                            <button id="signin_button" type="button" class="signin btn btn-info">
+                                <i class="icon-signin"></i>Signin
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(function() {
+            var path = "/";
+
+            $("#signin_button").click(function(event) {
+                event.preventDefault();
+                window.location.href = path + "login" + ".html";
+            });
+        });
+    </script>
+
+        <div class="container">
+            <div class="top_offset">
+
+<div class="row">
+    <div class="span12">
+        <h2 class="board-header">Admin Home</h2>
+    </div>
+</div>
+
+<div class="row">
+    <div class="span3 well">
+        <ul class="nav nav-list">
+            <li class="active"><a href="/admin/index.html">Home</a></li>
+
+            <li class="divider"></li>
+
+            <li><a href="/admin/users.html">Users</a></li>
+            <li><a href="/admin/currencies.html">Currencies</a></li>
+        </ul>
+    </div>
+
+    <div class="span8"></div>
+</div>
+            </div>
+        </div>
+
+        <div class="clearfix push"></div>
+    </div>
+
+<div class="extra">
+    <div class="extra-inner">
+        <div class="container">
+            <div class="row">
+                <div class="span4">
+                    <ul>
+                        <li><span id="download_webinspect_link">Download WebInspect</span></li>
+                    </ul>
+                </div>
+
+                <div class="span4">
+                    <ul>
+                        <li><span id="terms_of_use_link">Terms of Use</span></li>
+                    </ul>
+                </div>
+
+                <div class="span4">
+                    <ul>
+                        <li><span id="contact_hp_link">Contact HP</span></li>
+                        <li><span id="privacy_statement_link">Privacy Statement</span></li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="disclaimer span12">
+                    The Free Online Bank Web site is published by Hewlett-Packard, Company for the sole purpose of demonstrating
+                    the functionality and effectiveness of Hewlett-Packard Fortify’s WebInspect products in detecting and reporting
+                    Web application vulnerabilities. This site is not a real banking site and any similarities to third party products
+                    and/or Web sites are purely coincidental. This site is provided "as is" without warranty of any kind,
+                    either express or implied. Hewlett-Packard Company does not assume any risk in relation to your use of this Web site.
+                    Use of this Web site indicates that you have read and agree to Hewlett-Packard Company’s Terms of Use found at
+                    <a href="http://www8.hp.com/us/en/privacy/terms-of-use.html" target="_blank">http://www8.hp.com/us/en/privacy/terms-of-use.html</a>
+                    and Hewlett-Packard Company’s Online Privacy Statement found at
+                    <a href="http://www8.hp.com/us/en/privacy/privacy.html" target="_blank">http://www8.hp.com/us/en/privacy/privacy.html</a>.
+
+                    <br/><br/>
+
+                    Copyright © 2012-2013, Hewlett-Packard Development Company. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        var path = "/";
+
+        var attachClickHandler = function(selector, handler) {
+$(".extra").on('click', selector, handler);
+        }
+
+        var footerLinks = {
+            "download_webinspect_link": { absolute: true, page: "https://download.hpsmartupdate.com/webinspect/" },
+            "contact_hp_link" : { absolute: true, page: "https://support.fortify.com" },
+            "privacy_statement_link": { absolute: true, page: "http://www8.hp.com/us/en/privacy/privacy.html" },
+            "terms_of_use_link": { absolute: true, page: "http://www8.hp.com/us/en/privacy/terms-of-use.html" }
+        };
+
+        $.each(footerLinks, function(linkId, link) {
+            attachClickHandler('span[id="' + linkId + '"]', function(event) {
+                event.preventDefault();
+                if (link.absolute) {
+                    window.location.href = link.page;
+                } else {
+                    window.location.href = path + link.page + ".html";
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>
+]]></RawResponse></Issue><Issue><CheckTypeID>Vulnerability</CheckTypeID><EngineType>CUSTOM</EngineType><URL>http://zero.webappsecurity.com:80/admin/</URL><Scheme>http</Scheme><Host>zero.webappsecurity.com</Host><Port>80</Port><AttackSession null="1" /><VulnerableSession><![CDATA[GET /admin/ HTTP/1.1
+Accept: */*
+Pragma: no-cache
+User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.2.18) Gecko/20110614 Firefox/3.6.18 (.NET CLR 3.5.30729)
+Host: zero.webappsecurity.com
+Connection: Keep-Alive
+X-WIPP: AscVersion=10.1.177.0
+X-Scan-Memo: Category="Crawl"; SID="B09C4D5CC22F10C01D9D84418780B93D"; SessionType="ExternalAddedToCrawl"; CrawlType="None"; AttackType="None"; OriginatingEngineID="00000000-0000-0000-0000-000000000000"; Method="CreateStateRequest"; ThreadId="139"; ThreadType="CrawlBreadthFirstDBReader"; 
+X-RequestManager-Memo: StateID="659"; ID="1e0e1f84-2b10-41b4-a203-4da7a03f8f59"; 
+X-Request-Memo: ID="bfe50c6a-e81a-4b20-9b7f-830b97e58a09"; ThreadId="110"; 
+Cookie: CustomCookie=WebInspect90497ZX733C3C9FC85D468A82759DDB55594A61YF788
+
+]]></VulnerableSession><TriggerSession null="1" /><DetectedInSession null="1" /><VulnerabilityID>4721</VulnerabilityID><Severity>3</Severity><Name>Admin Section Must Require Authentication</Name><ReportSection><Name>Summary</Name><SectionText><![CDATA[This policy states that any area of the website or web application that contains sensitive information or access to privileged functionality such as remote site administration requires authentication before allowing access. The URL <b> ~FullURL~ </b>has failed this policy.
+
+]]></SectionText></ReportSection><ReportSection><Name>Implication</Name><SectionText></SectionText></ReportSection><ReportSection><Name>Execution</Name><SectionText></SectionText></ReportSection><ReportSection><Name>Fix</Name><SectionText><![CDATA[<br />Restrict access to important directories or files.<br /><br /><b>Apache:</b><br /><a href="http://httpd.apache.org/docs/misc/security_tips.html">Security Tips for Server Configuration</a><br /><a href="http://www.w3.org/Security/faq/wwwsf3.html">Protecting Confidential Documents at Your Site</a><br /><a href="http://linux.omnipotent.net/article.php?article_id=3667">Securing Apache - Access Control</a><br /><br /><b>IIS:</b><br /><a href="http://www.microsoft.com/technet/prodtechnol/windowsserver2003/technologies/featured/iis/default.mspx">Implementing NTFS Standard Permissions on Your Web Site</a><br /><br /><b>Netscape:</b><br /><a href="http://www.belk.com/manual/ag/esaccess.htm">Controlling Access to Your Server</a><br /><br /><b>General:</b><br /><a href="http://www.hwg.org/lists/hwg-servers/passwords.html">Password-protecting web pages</a><br /><a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/secmod/html/secmod71.asp">Web Security</a>]]></SectionText></ReportSection><ReportSection><Name>Reference Info</Name><SectionText></SectionText></ReportSection><RawResponse><![CDATA[HTTP/1.1 200 OK
+Date: Fri, 20 Dec 2013 19:27:05 GMT
+Server: Apache/2.2.22 (Ubuntu)
+Cache-Control: no-cache, max-age=0, must-revalidate, no-store
+Content-Language: en-US
+Vary: Accept-Encoding
+Content-Type: text/html;charset=UTF-8
+Connection: Keep-Alive
+Content-Length: 6602
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Zero - Admin - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <link type="text/css" rel="stylesheet" href="/resources/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="/resources/css/font-awesome.css"/>
+    <link type="text/css" rel="stylesheet" href="/resources/css/main.css"/>
+
+    <script src="/resources/js/jquery-1.8.2.min.js"></script>
+        <script src="/resources/js/bootstrap.min.js"></script>
+
+    <script src="/resources/js/placeholders.min.js"></script>
+    <script type="text/javascript">
+        Placeholders.init({
+            live: true, // Apply to future and modified elements too
+            hideOnFocus: true // Hide the placeholder when the element receives focus
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ajaxError(function errorHandler(event, xhr, ajaxOptions, thrownError) {
+            if (xhr.status == 403) {
+                window.location.reload();
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a href="/index.html" class="brand">Zero Bank</a>
+
+                <div>
+                    <ul class="nav float-right">
+                        <li>    <form action="/search.html"
+          class="navbar-search pull-right" style="padding-right: 20px">
+        <input type="text" id="searchTerm" name="searchTerm" class="search-query" placeholder="Search"/>
+    </form>
+</li>
+                        <li>
+                            <button id="signin_button" type="button" class="signin btn btn-info">
+                                <i class="icon-signin"></i>Signin
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(function() {
+            var path = "/";
+
+            $("#signin_button").click(function(event) {
+                event.preventDefault();
+                window.location.href = path + "login" + ".html";
+            });
+        });
+    </script>
+
+        <div class="container">
+            <div class="top_offset">
+
+<div class="row">
+    <div class="span12">
+        <h2 class="board-header">Admin Home</h2>
+    </div>
+</div>
+
+<div class="row">
+    <div class="span3 well">
+        <ul class="nav nav-list">
+            <li class="active"><a href="/admin/index.html">Home</a></li>
+
+            <li class="divider"></li>
+
+            <li><a href="/admin/users.html">Users</a></li>
+            <li><a href="/admin/currencies.html">Currencies</a></li>
+        </ul>
+    </div>
+
+    <div class="span8"></div>
+</div>
+            </div>
+        </div>
+
+        <div class="clearfix push"></div>
+    </div>
+
+<div class="extra">
+    <div class="extra-inner">
+        <div class="container">
+            <div class="row">
+                <div class="span4">
+                    <ul>
+                        <li><span id="download_webinspect_link">Download WebInspect</span></li>
+                    </ul>
+                </div>
+
+                <div class="span4">
+                    <ul>
+                        <li><span id="terms_of_use_link">Terms of Use</span></li>
+                    </ul>
+                </div>
+
+                <div class="span4">
+                    <ul>
+                        <li><span id="contact_hp_link">Contact HP</span></li>
+                        <li><span id="privacy_statement_link">Privacy Statement</span></li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="disclaimer span12">
+                    The Free Online Bank Web site is published by Hewlett-Packard, Company for the sole purpose of demonstrating
+                    the functionality and effectiveness of Hewlett-Packard Fortify’s WebInspect products in detecting and reporting
+                    Web application vulnerabilities. This site is not a real banking site and any similarities to third party products
+                    and/or Web sites are purely coincidental. This site is provided "as is" without warranty of any kind,
+                    either express or implied. Hewlett-Packard Company does not assume any risk in relation to your use of this Web site.
+                    Use of this Web site indicates that you have read and agree to Hewlett-Packard Company’s Terms of Use found at
+                    <a href="http://www8.hp.com/us/en/privacy/terms-of-use.html" target="_blank">http://www8.hp.com/us/en/privacy/terms-of-use.html</a>
+                    and Hewlett-Packard Company’s Online Privacy Statement found at
+                    <a href="http://www8.hp.com/us/en/privacy/privacy.html" target="_blank">http://www8.hp.com/us/en/privacy/privacy.html</a>.
+
+                    <br/><br/>
+
+                    Copyright © 2012-2013, Hewlett-Packard Development Company. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        var path = "/";
+
+        var attachClickHandler = function(selector, handler) {
+$(".extra").on('click', selector, handler);
+        }
+
+        var footerLinks = {
+            "download_webinspect_link": { absolute: true, page: "https://download.hpsmartupdate.com/webinspect/" },
+            "contact_hp_link" : { absolute: true, page: "https://support.fortify.com" },
+            "privacy_statement_link": { absolute: true, page: "http://www8.hp.com/us/en/privacy/privacy.html" },
+            "terms_of_use_link": { absolute: true, page: "http://www8.hp.com/us/en/privacy/terms-of-use.html" }
+        };
+
+        $.each(footerLinks, function(linkId, link) {
+            attachClickHandler('span[id="' + linkId + '"]', function(event) {
+                event.preventDefault();
+                if (link.absolute) {
+                    window.location.href = link.page;
+                } else {
+                    window.location.href = path + link.page + ".html";
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>
+]]></RawResponse></Issue><Issue><CheckTypeID>Vulnerability</CheckTypeID><EngineType>NOENGINE</EngineType><URL>http://zero.webappsecurity.com:80/admin/</URL><Scheme>http</Scheme><Host>zero.webappsecurity.com</Host><Port>80</Port><AttackSession><![CDATA[GET /admin/ HTTP/1.1
+Accept: */*
+Pragma: no-cache
+User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.2.18) Gecko/20110614 Firefox/3.6.18 (.NET CLR 3.5.30729)
+Host: zero.webappsecurity.com
+Connection: Keep-Alive
+X-WIPP: AscVersion=10.1.177.0
+X-Scan-Memo: Category="Crawl"; SID="B09C4D5CC22F10C01D9D84418780B93D"; SessionType="ExternalAddedToCrawl"; CrawlType="None"; AttackType="None"; OriginatingEngineID="00000000-0000-0000-0000-000000000000"; Method="CreateStateRequest"; ThreadId="139"; ThreadType="CrawlBreadthFirstDBReader"; 
+X-RequestManager-Memo: StateID="659"; ID="1e0e1f84-2b10-41b4-a203-4da7a03f8f59"; 
+X-Request-Memo: ID="bfe50c6a-e81a-4b20-9b7f-830b97e58a09"; ThreadId="110"; 
+Cookie: CustomCookie=WebInspect90497ZX733C3C9FC85D468A82759DDB55594A61YF788
+
+]]></AttackSession><VulnerableSession null="1" /><TriggerSession null="1" /><DetectedInSession null="1" /><VulnerabilityID>11294</VulnerabilityID><Severity>2</Severity><Name>Missing Cross-Frame Scripting Protection</Name><ReportSection><Name>Summary</Name><SectionText><![CDATA[A Cross-Frame Scripting (XFS) vulnerability can allow an attacker to load the vulnerable application inside an HTML iframe tag on a malicious page. The attacker could use this weakness to devise a Clickjacking attack to conduct phishing, frame sniffing, social engineering or Cross-Site Request Forgery attacks.
+<br /><br /><b>Clickjacking</b><br />
+The goal of a Clickjacking attack is to deceive the victim user into interacting with UI elements of the attacker’s choice on the target web site without her knowledge and in turn executing privileged functionality on the victim’s behalf. To achieve this goal, the attacker must exploit the XFS vulnerability to load the attack target inside an iframe tag, hide it using Cascading Style Sheets (CSS) and overlay the phishing content on the malicious page. By placing the UI elements on the phishing page to overlap with those on the page targeted in the attack, the attacker can ensure that the victim is forced to interact with the UI elements on the target page not visible to the victim.<br /> 
+WebInspect has detected a response containing one or more forms that accept user input but is missing XFS protection.<br /><i><drc_xfsprotection /></i>]]></SectionText></ReportSection><ReportSection><Name>Implication</Name><SectionText><![CDATA[A Cross-Frame Scripting weakness could allow an attacker to embed the vulnerable application inside an <font face="courier new">iframe</font>. Exploitation of this weakness could result in:<ol><li>Hijacking of user events such as keystrokes</li><li>Theft of sensitive information</li><li>Execution of privileged functionality through combination with Cross-Site Request Forgery attacks</li></ol>]]></SectionText></ReportSection><ReportSection><Name>Execution</Name><SectionText><![CDATA[Create a test page containing an HTML <font face="courier new">&lt;iframe&gt;</font> tag whose <b><em>src</em></b> attribute is set to ~FullURL~. Successful framing of the target page indicates the application’s susceptibility to XFS. <br />Note that WebInspect will report only one instance of this check across each host within the scope of the scan. The other visible pages on the site may, however, be vulnerable to XFS as well and hence should be protected against it with an appropriate fix.]]></SectionText></ReportSection><ReportSection><Name>Fix</Name><SectionText><![CDATA[Browser vendors have introduced and adopted a policy-based mitigation technique using the <font face="courier new">X-Frame-Options</font> header. Developers can use this header to instruct the browser about appropriate actions to perform if their site is included inside an <font face="courier new">iframe</font>. 
+Developers must set the <font face="courier new">X-Frame-Options</font> header to one of the following permitted values:
+<ul><li>DENY<br />
+Deny all attempts to frame the page </li><li>SAMEORIGIN<br />
+The page can be framed by another page only if it belongs to the same origin as the page being framed</li><li>ALLOW-FROM origin<br />
+Developers can specify a list of trusted origins in the origin attribute. Only pages on origin are permitted to load this page inside an <font face="courier new">iframe</font></li></ul>
+Developers must <b>also</b> use client-side frame busting JavaScript as a protection against XFS. This will enable users of older browsers that do not support the X-Frame-Options header to also be protected from clickjacking attacks.
+]]></SectionText></ReportSection><ReportSection><Name>Reference Info</Name><SectionText><![CDATA[<br /><b>HP 2012 Cyber Security Report</b><br /><a href="http://www.hpenterprisesecurity.com/collateral/whitepaper/HP2012CyberRiskReport_0313.pdf">The X-Frame-Options header - a failure to launch</a><br /><br /><b>Server Configuration:</b><br /><a href="http://support.microsoft.com/kb/2694329">IIS</a><br /><a href="https://developer.mozilla.org/en-US/docs/HTTP/X-Frame-Options">Apache, nginx</a><br /><br /><b>Specification:</b><br /><a href="http://tools.ietf.org/html/draft-ietf-websec-x-frame-options-01">X-Frame-Options IETF Draft</a><br /><br /><b>OWASP:</b><br /><a href="https://www.owasp.org/index.php/Clickjacking">Clickjacking</a><br /><br /><b>Frame Busting:</b><br /><a href="http://crypto.stanford.edu/~dabo/pubs/papers/framebust.pdf">Busting Frame Busting: A Study of Clickjacking Vulnerabilities on Popular Sites</a><br /><a href="https://www.owasp.org/images/0/0e/OWASP_AppSec_Research_2010_Busting_Frame_Busting_by_Rydstedt.pdf">OWASP: Busting Frame Busting</a><br /><br />]]></SectionText></ReportSection><RawResponse><![CDATA[HTTP/1.1 200 OK
+Date: Fri, 20 Dec 2013 19:27:05 GMT
+Server: Apache/2.2.22 (Ubuntu)
+Cache-Control: no-cache, max-age=0, must-revalidate, no-store
+Content-Language: en-US
+Vary: Accept-Encoding
+Content-Type: text/html;charset=UTF-8
+Connection: Keep-Alive
+Content-Length: 6602
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Zero - Admin - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <link type="text/css" rel="stylesheet" href="/resources/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="/resources/css/font-awesome.css"/>
+    <link type="text/css" rel="stylesheet" href="/resources/css/main.css"/>
+
+    <script src="/resources/js/jquery-1.8.2.min.js"></script>
+        <script src="/resources/js/bootstrap.min.js"></script>
+
+    <script src="/resources/js/placeholders.min.js"></script>
+    <script type="text/javascript">
+        Placeholders.init({
+            live: true, // Apply to future and modified elements too
+            hideOnFocus: true // Hide the placeholder when the element receives focus
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ajaxError(function errorHandler(event, xhr, ajaxOptions, thrownError) {
+            if (xhr.status == 403) {
+                window.location.reload();
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a href="/index.html" class="brand">Zero Bank</a>
+
+                <div>
+                    <ul class="nav float-right">
+                        <li>    <form action="/search.html"
+          class="navbar-search pull-right" style="padding-right: 20px">
+        <input type="text" id="searchTerm" name="searchTerm" class="search-query" placeholder="Search"/>
+    </form>
+</li>
+                        <li>
+                            <button id="signin_button" type="button" class="signin btn btn-info">
+                                <i class="icon-signin"></i>Signin
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(function() {
+            var path = "/";
+
+            $("#signin_button").click(function(event) {
+                event.preventDefault();
+                window.location.href = path + "login" + ".html";
+            });
+        });
+    </script>
+
+        <div class="container">
+            <div class="top_offset">
+
+<div class="row">
+    <div class="span12">
+        <h2 class="board-header">Admin Home</h2>
+    </div>
+</div>
+
+<div class="row">
+    <div class="span3 well">
+        <ul class="nav nav-list">
+            <li class="active"><a href="/admin/index.html">Home</a></li>
+
+            <li class="divider"></li>
+
+            <li><a href="/admin/users.html">Users</a></li>
+            <li><a href="/admin/currencies.html">Currencies</a></li>
+        </ul>
+    </div>
+
+    <div class="span8"></div>
+</div>
+            </div>
+        </div>
+
+        <div class="clearfix push"></div>
+    </div>
+
+<div class="extra">
+    <div class="extra-inner">
+        <div class="container">
+            <div class="row">
+                <div class="span4">
+                    <ul>
+                        <li><span id="download_webinspect_link">Download WebInspect</span></li>
+                    </ul>
+                </div>
+
+                <div class="span4">
+                    <ul>
+                        <li><span id="terms_of_use_link">Terms of Use</span></li>
+                    </ul>
+                </div>
+
+                <div class="span4">
+                    <ul>
+                        <li><span id="contact_hp_link">Contact HP</span></li>
+                        <li><span id="privacy_statement_link">Privacy Statement</span></li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="disclaimer span12">
+                    The Free Online Bank Web site is published by Hewlett-Packard, Company for the sole purpose of demonstrating
+                    the functionality and effectiveness of Hewlett-Packard Fortify’s WebInspect products in detecting and reporting
+                    Web application vulnerabilities. This site is not a real banking site and any similarities to third party products
+                    and/or Web sites are purely coincidental. This site is provided "as is" without warranty of any kind,
+                    either express or implied. Hewlett-Packard Company does not assume any risk in relation to your use of this Web site.
+                    Use of this Web site indicates that you have read and agree to Hewlett-Packard Company’s Terms of Use found at
+                    <a href="http://www8.hp.com/us/en/privacy/terms-of-use.html" target="_blank">http://www8.hp.com/us/en/privacy/terms-of-use.html</a>
+                    and Hewlett-Packard Company’s Online Privacy Statement found at
+                    <a href="http://www8.hp.com/us/en/privacy/privacy.html" target="_blank">http://www8.hp.com/us/en/privacy/privacy.html</a>.
+
+                    <br/><br/>
+
+                    Copyright © 2012-2013, Hewlett-Packard Development Company. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        var path = "/";
+
+        var attachClickHandler = function(selector, handler) {
+$(".extra").on('click', selector, handler);
+        }
+
+        var footerLinks = {
+            "download_webinspect_link": { absolute: true, page: "https://download.hpsmartupdate.com/webinspect/" },
+            "contact_hp_link" : { absolute: true, page: "https://support.fortify.com" },
+            "privacy_statement_link": { absolute: true, page: "http://www8.hp.com/us/en/privacy/privacy.html" },
+            "terms_of_use_link": { absolute: true, page: "http://www8.hp.com/us/en/privacy/terms-of-use.html" }
+        };
+
+        $.each(footerLinks, function(linkId, link) {
+            attachClickHandler('span[id="' + linkId + '"]', function(event) {
+                event.preventDefault();
+                if (link.absolute) {
+                    window.location.href = link.page;
+                } else {
+                    window.location.href = path + link.page + ".html";
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>
+]]></RawResponse></Issue><Issue><CheckTypeID>Best Practices</CheckTypeID><EngineType>CUSTOM</EngineType><URL>http://zero.webappsecurity.com:80/admin/index.html</URL><Scheme>http</Scheme><Host>zero.webappsecurity.com</Host><Port>80</Port><AttackSession null="1" /><VulnerableSession null="1" /><TriggerSession null="1" /><DetectedInSession null="1" /><VulnerabilityID>5597</VulnerabilityID><Severity>0</Severity><Name>Form Auto Complete Active</Name><ReportSection><Name>Summary</Name><SectionText><![CDATA[Most recent browsers have features that will save form field content entered by users and then automatically complete form entry the next time the fields are encountered. This feature is enabled by default and could leak sensitive information since it is stored on the hard drive of the user. The risk of this issue is greatly increased if users are accessing the application from a shared environment. Recommendations include setting autocomplete to "off" on all your forms.]]></SectionText></ReportSection><ReportSection><Name>Implication</Name><SectionText></SectionText></ReportSection><ReportSection><Name>Execution</Name><SectionText></SectionText></ReportSection><ReportSection><Name>Fix</Name><SectionText></SectionText></ReportSection><ReportSection><Name>Reference Info</Name><SectionText><![CDATA[<br /><b>Microsoft:</b><br /><a href="http://msdn.microsoft.com/en-us/library/ms533032(VS.85).aspx#security">Autocomplete Security</a>]]></SectionText></ReportSection><RawResponse><![CDATA[HTTP/1.1 200 OK
+Date: Fri, 20 Dec 2013 19:27:20 GMT
+Server: Apache/2.2.22 (Ubuntu)
+Cache-Control: no-cache, max-age=0, must-revalidate, no-store
+Content-Language: en-US
+Vary: Accept-Encoding
+Content-Type: text/html;charset=UTF-8
+Connection: Keep-Alive
+Content-Length: 6602
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Zero - Admin - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <link type="text/css" rel="stylesheet" href="/resources/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="/resources/css/font-awesome.css"/>
+    <link type="text/css" rel="stylesheet" href="/resources/css/main.css"/>
+
+    <script src="/resources/js/jquery-1.8.2.min.js"></script>
+        <script src="/resources/js/bootstrap.min.js"></script>
+
+    <script src="/resources/js/placeholders.min.js"></script>
+    <script type="text/javascript">
+        Placeholders.init({
+            live: true, // Apply to future and modified elements too
+            hideOnFocus: true // Hide the placeholder when the element receives focus
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ajaxError(function errorHandler(event, xhr, ajaxOptions, thrownError) {
+            if (xhr.status == 403) {
+                window.location.reload();
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a href="/index.html" class="brand">Zero Bank</a>
+
+                <div>
+                    <ul class="nav float-right">
+                        <li>    <form action="/search.html"
+          class="navbar-search pull-right" style="padding-right: 20px">
+        <input type="text" id="searchTerm" name="searchTerm" class="search-query" placeholder="Search"/>
+    </form>
+</li>
+                        <li>
+                            <button id="signin_button" type="button" class="signin btn btn-info">
+                                <i class="icon-signin"></i>Signin
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(function() {
+            var path = "/";
+
+            $("#signin_button").click(function(event) {
+                event.preventDefault();
+                window.location.href = path + "login" + ".html";
+            });
+        });
+    </script>
+
+        <div class="container">
+            <div class="top_offset">
+
+<div class="row">
+    <div class="span12">
+        <h2 class="board-header">Admin Home</h2>
+    </div>
+</div>
+
+<div class="row">
+    <div class="span3 well">
+        <ul class="nav nav-list">
+            <li class="active"><a href="/admin/index.html">Home</a></li>
+
+            <li class="divider"></li>
+
+            <li><a href="/admin/users.html">Users</a></li>
+            <li><a href="/admin/currencies.html">Currencies</a></li>
+        </ul>
+    </div>
+
+    <div class="span8"></div>
+</div>
+            </div>
+        </div>
+
+        <div class="clearfix push"></div>
+    </div>
+
+<div class="extra">
+    <div class="extra-inner">
+        <div class="container">
+            <div class="row">
+                <div class="span4">
+                    <ul>
+                        <li><span id="download_webinspect_link">Download WebInspect</span></li>
+                    </ul>
+                </div>
+
+                <div class="span4">
+                    <ul>
+                        <li><span id="terms_of_use_link">Terms of Use</span></li>
+                    </ul>
+                </div>
+
+                <div class="span4">
+                    <ul>
+                        <li><span id="contact_hp_link">Contact HP</span></li>
+                        <li><span id="privacy_statement_link">Privacy Statement</span></li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="disclaimer span12">
+                    The Free Online Bank Web site is published by Hewlett-Packard, Company for the sole purpose of demonstrating
+                    the functionality and effectiveness of Hewlett-Packard Fortify’s WebInspect products in detecting and reporting
+                    Web application vulnerabilities. This site is not a real banking site and any similarities to third party products
+                    and/or Web sites are purely coincidental. This site is provided "as is" without warranty of any kind,
+                    either express or implied. Hewlett-Packard Company does not assume any risk in relation to your use of this Web site.
+                    Use of this Web site indicates that you have read and agree to Hewlett-Packard Company’s Terms of Use found at
+                    <a href="http://www8.hp.com/us/en/privacy/terms-of-use.html" target="_blank">http://www8.hp.com/us/en/privacy/terms-of-use.html</a>
+                    and Hewlett-Packard Company’s Online Privacy Statement found at
+                    <a href="http://www8.hp.com/us/en/privacy/privacy.html" target="_blank">http://www8.hp.com/us/en/privacy/privacy.html</a>.
+
+                    <br/><br/>
+
+                    Copyright © 2012-2013, Hewlett-Packard Development Company. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        var path = "/";
+
+        var attachClickHandler = function(selector, handler) {
+$(".extra").on('click', selector, handler);
+        }
+
+        var footerLinks = {
+            "download_webinspect_link": { absolute: true, page: "https://download.hpsmartupdate.com/webinspect/" },
+            "contact_hp_link" : { absolute: true, page: "https://support.fortify.com" },
+            "privacy_statement_link": { absolute: true, page: "http://www8.hp.com/us/en/privacy/privacy.html" },
+            "terms_of_use_link": { absolute: true, page: "http://www8.hp.com/us/en/privacy/terms-of-use.html" }
+        };
+
+        $.each(footerLinks, function(linkId, link) {
+            attachClickHandler('span[id="' + linkId + '"]', function(event) {
+                event.preventDefault();
+                if (link.absolute) {
+                    window.location.href = link.page;
+                } else {
+                    window.location.href = path + link.page + ".html";
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>
+]]></RawResponse></Issue><Issue><CheckTypeID>Vulnerability</CheckTypeID><EngineType>CUSTOM</EngineType><URL>http://zero.webappsecurity.com:80/admin/users.html</URL><Scheme>http</Scheme><Host>zero.webappsecurity.com</Host><Port>80</Port><AttackSession null="1" /><VulnerableSession><![CDATA[GET /admin/users.html HTTP/1.1
+Referer: http://zero.webappsecurity.com/admin/
+Accept: */*
+Pragma: no-cache
+User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.2.18) Gecko/20110614 Firefox/3.6.18 (.NET CLR 3.5.30729)
+Host: zero.webappsecurity.com
+Connection: Keep-Alive
+X-WIPP: AscVersion=10.1.177.0
+X-Scan-Memo: Category="Crawl"; SID="810BCB46E8C09C737ECDC561083681F4"; PSID="B09C4D5CC22F10C01D9D84418780B93D"; SessionType="Crawl"; CrawlType="HTML"; AttackType="None"; OriginatingEngineID="00000000-0000-0000-0000-000000000000"; Method="CreateStateRequest"; ThreadId="135"; ThreadType="CrawlBreadthFirstDBReader"; 
+X-RequestManager-Memo: StateID="659"; ID="d403b118-c8e9-4981-9429-6921860ed86b"; 
+X-Request-Memo: ID="2a8bf4ce-b10f-44a6-9e8f-9bc675819682"; ThreadId="110"; 
+Cookie: CustomCookie=WebInspect90497ZX733C3C9FC85D468A82759DDB55594A61YF788
+
+]]></VulnerableSession><TriggerSession null="1" /><DetectedInSession null="1" /><VulnerabilityID>10834</VulnerabilityID><Severity>4</Severity><Name>Social Security Number Disclosure</Name><ReportSection><Name>Summary</Name><SectionText><![CDATA[A critical vulnerability has been detected within your web application due to the presence of one or more Social Security Numbers. If this information is carried over to a production server, it can cause major security problems. Recommendations include not storing this information on your web application. 
+
+]]></SectionText></ReportSection><ReportSection><Name>Implication</Name><SectionText><![CDATA[<br />Social Security Numbers are a highly sought out prize for attackers, and an item to which a large percentage of time would be dedicated in an effort to find. At a minimum, this can lead to theft of the victim's identity.<br />]]></SectionText></ReportSection><ReportSection><Name>Execution</Name><SectionText></SectionText></ReportSection><ReportSection><Name>Fix</Name><SectionText><![CDATA[<br />When sensitive data needs to be available on your web application, mask part of the data so this information is not fully disclosed.<br /><br />
+Here are a few examples:
+<br /><br /><b>Social Security Numbers:</b><br />
+***-**-1234<br />
+123-**-**** ]]></SectionText></ReportSection><ReportSection><Name>Reference Info</Name><SectionText></SectionText></ReportSection><RawResponse><![CDATA[HTTP/1.1 200 OK
+Date: Fri, 20 Dec 2013 19:27:20 GMT
+Server: Apache/2.2.22 (Ubuntu)
+Cache-Control: no-cache, max-age=0, must-revalidate, no-store
+Content-Language: en-US
+Vary: Accept-Encoding
+Content-Type: text/html;charset=UTF-8
+Connection: Keep-Alive
+Content-Length: 10793
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Zero - Admin - Users</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <link type="text/css" rel="stylesheet" href="/resources/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="/resources/css/font-awesome.css"/>
+    <link type="text/css" rel="stylesheet" href="/resources/css/main.css"/>
+
+    <script src="/resources/js/jquery-1.8.2.min.js"></script>
+        <script src="/resources/js/bootstrap.min.js"></script>
+
+    <script src="/resources/js/placeholders.min.js"></script>
+    <script type="text/javascript">
+        Placeholders.init({
+            live: true, // Apply to future and modified elements too
+            hideOnFocus: true // Hide the placeholder when the element receives focus
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ajaxError(function errorHandler(event, xhr, ajaxOptions, thrownError) {
+            if (xhr.status == 403) {
+                window.location.reload();
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a href="/index.html" class="brand">Zero Bank</a>
+
+                <div>
+                    <ul class="nav float-right">
+                        <li>    <form action="/search.html"
+          class="navbar-search pull-right" style="padding-right: 20px">
+        <input type="text" id="searchTerm" name="searchTerm" class="search-query" placeholder="Search"/>
+    </form>
+</li>
+                        <li>
+                            <button id="signin_button" type="button" class="signin btn btn-info">
+                                <i class="icon-signin"></i>Signin
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(function() {
+            var path = "/";
+
+            $("#signin_button").click(function(event) {
+                event.preventDefault();
+                window.location.href = path + "login" + ".html";
+            });
+        });
+    </script>
+
+        <div class="container">
+            <div class="top_offset">
+
+<div class="row">
+    <div class="span12">
+        <h2 class="board-header">Users</h2>
+    </div>
+</div>
+
+<div class="row">
+    <div class="span3 well">
+        <ul class="nav nav-list">
+            <li><a href="/admin/index.html">Home</a></li>
+
+            <li class="divider"></li>
+
+            <li class="active"><a href="/admin/users.html">Users</a></li>
+            <li><a href="/admin/currencies.html">Currencies</a></li>
+        </ul>
+    </div>
+
+    <div class="span8">
+        <div class="board">
+            <div class="board-content">
+                <table class="table">
+                    <col width="40%"/>
+                    <col width="30%"/>
+                    <col width="30%"/>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Password</th>
+                            <th>SSN</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <tr>
+                                <td>
+                                    Leeroy Jenkins
+                                </td>
+                                <td>
+                                    VIZ10AWT8VL
+                                </td>
+                                <td>
+                                    536-48-3769
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Stephen Bowen
+                                </td>
+                                <td>
+                                    OTZ07BXM0BE
+                                </td>
+                                <td>
+                                    607-58-7435
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Linus Moran
+                                </td>
+                                <td>
+                                    FKO04SXA7TI
+                                </td>
+                                <td>
+                                    247-54-1719
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Nero Chan
+                                </td>
+                                <td>
+                                    TXJ77CQO5EI
+                                </td>
+                                <td>
+                                    578-13-3713
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Kadeem Higgins
+                                </td>
+                                <td>
+                                    MFC50OQE7VO
+                                </td>
+                                <td>
+                                    449-20-3206
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Quinn Burks
+                                </td>
+                                <td>
+                                    HWZ97ZUM3NK
+                                </td>
+                                <td>
+                                    008-70-6738
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Davis Thompson
+                                </td>
+                                <td>
+                                    RGD78SHB0TG
+                                </td>
+                                <td>
+                                    574-56-1932
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Lester Keller
+                                </td>
+                                <td>
+                                    EIJ79NLT0TP
+                                </td>
+                                <td>
+                                    330-58-4012
+                                </td>
+                            </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+
+        <div class="clearfix push"></div>
+    </div>
+
+<div class="extra">
+    <div class="extra-inner">
+        <div class="container">
+            <div class="row">
+                <div class="span4">
+                    <ul>
+                        <li><span id="download_webinspect_link">Download WebInspect</span></li>
+                    </ul>
+                </div>
+
+                <div class="span4">
+                    <ul>
+                        <li><span id="terms_of_use_link">Terms of Use</span></li>
+                    </ul>
+                </div>
+
+                <div class="span4">
+                    <ul>
+                        <li><span id="contact_hp_link">Contact HP</span></li>
+                        <li><span id="privacy_statement_link">Privacy Statement</span></li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="disclaimer span12">
+                    The Free Online Bank Web site is published by Hewlett-Packard, Company for the sole purpose of demonstrating
+                    the functionality and effectiveness of Hewlett-Packard Fortify’s WebInspect products in detecting and reporting
+                    Web application vulnerabilities. This site is not a real banking site and any similarities to third party products
+                    and/or Web sites are purely coincidental. This site is provided "as is" without warranty of any kind,
+                    either express or implied. Hewlett-Packard Company does not assume any risk in relation to your use of this Web site.
+                    Use of this Web site indicates that you have read and agree to Hewlett-Packard Company’s Terms of Use found at
+                    <a href="http://www8.hp.com/us/en/privacy/terms-of-use.html" target="_blank">http://www8.hp.com/us/en/privacy/terms-of-use.html</a>
+                    and Hewlett-Packard Company’s Online Privacy Statement found at
+                    <a href="http://www8.hp.com/us/en/privacy/privacy.html" target="_blank">http://www8.hp.com/us/en/privacy/privacy.html</a>.
+
+                    <br/><br/>
+
+                    Copyright © 2012-2013, Hewlett-Packard Development Company. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        var path = "/";
+
+        var attachClickHandler = function(selector, handler) {
+$(".extra").on('click', selector, handler);
+        }
+
+        var footerLinks = {
+            "download_webinspect_link": { absolute: true, page: "https://download.hpsmartupdate.com/webinspect/" },
+            "contact_hp_link" : { absolute: true, page: "https://support.fortify.com" },
+            "privacy_statement_link": { absolute: true, page: "http://www8.hp.com/us/en/privacy/privacy.html" },
+            "terms_of_use_link": { absolute: true, page: "http://www8.hp.com/us/en/privacy/terms-of-use.html" }
+        };
+
+        $.each(footerLinks, function(linkId, link) {
+            attachClickHandler('span[id="' + linkId + '"]', function(event) {
+                event.preventDefault();
+                if (link.absolute) {
+                    window.location.href = link.page;
+                } else {
+                    window.location.href = path + link.page + ".html";
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>
+]]></RawResponse></Issue><Issue><CheckTypeID>Best Practices</CheckTypeID><EngineType>CUSTOM</EngineType><URL>http://zero.webappsecurity.com:80/admin/users.html</URL><Scheme>http</Scheme><Host>zero.webappsecurity.com</Host><Port>80</Port><AttackSession null="1" /><VulnerableSession><![CDATA[GET /admin/users.html HTTP/1.1
+Referer: http://zero.webappsecurity.com/admin/
+Accept: */*
+Pragma: no-cache
+User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.2.18) Gecko/20110614 Firefox/3.6.18 (.NET CLR 3.5.30729)
+Host: zero.webappsecurity.com
+Connection: Keep-Alive
+X-WIPP: AscVersion=10.1.177.0
+X-Scan-Memo: Category="Crawl"; SID="810BCB46E8C09C737ECDC561083681F4"; PSID="B09C4D5CC22F10C01D9D84418780B93D"; SessionType="Crawl"; CrawlType="HTML"; AttackType="None"; OriginatingEngineID="00000000-0000-0000-0000-000000000000"; Method="CreateStateRequest"; ThreadId="135"; ThreadType="CrawlBreadthFirstDBReader"; 
+X-RequestManager-Memo: StateID="659"; ID="d403b118-c8e9-4981-9429-6921860ed86b"; 
+X-Request-Memo: ID="2a8bf4ce-b10f-44a6-9e8f-9bc675819682"; ThreadId="110"; 
+Cookie: CustomCookie=WebInspect90497ZX733C3C9FC85D468A82759DDB55594A61YF788
+
+]]></VulnerableSession><TriggerSession null="1" /><DetectedInSession null="1" /><VulnerabilityID>5597</VulnerabilityID><Severity>0</Severity><Name>Form Auto Complete Active</Name><ReportSection><Name>Summary</Name><SectionText><![CDATA[Most recent browsers have features that will save form field content entered by users and then automatically complete form entry the next time the fields are encountered. This feature is enabled by default and could leak sensitive information since it is stored on the hard drive of the user. The risk of this issue is greatly increased if users are accessing the application from a shared environment. Recommendations include setting autocomplete to "off" on all your forms.]]></SectionText></ReportSection><ReportSection><Name>Implication</Name><SectionText></SectionText></ReportSection><ReportSection><Name>Execution</Name><SectionText></SectionText></ReportSection><ReportSection><Name>Fix</Name><SectionText></SectionText></ReportSection><ReportSection><Name>Reference Info</Name><SectionText><![CDATA[<br /><b>Microsoft:</b><br /><a href="http://msdn.microsoft.com/en-us/library/ms533032(VS.85).aspx#security">Autocomplete Security</a>]]></SectionText></ReportSection><RawResponse><![CDATA[HTTP/1.1 200 OK
+Date: Fri, 20 Dec 2013 19:27:20 GMT
+Server: Apache/2.2.22 (Ubuntu)
+Cache-Control: no-cache, max-age=0, must-revalidate, no-store
+Content-Language: en-US
+Vary: Accept-Encoding
+Content-Type: text/html;charset=UTF-8
+Connection: Keep-Alive
+Content-Length: 10793
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Zero - Admin - Users</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <link type="text/css" rel="stylesheet" href="/resources/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="/resources/css/font-awesome.css"/>
+    <link type="text/css" rel="stylesheet" href="/resources/css/main.css"/>
+
+    <script src="/resources/js/jquery-1.8.2.min.js"></script>
+        <script src="/resources/js/bootstrap.min.js"></script>
+
+    <script src="/resources/js/placeholders.min.js"></script>
+    <script type="text/javascript">
+        Placeholders.init({
+            live: true, // Apply to future and modified elements too
+            hideOnFocus: true // Hide the placeholder when the element receives focus
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ajaxError(function errorHandler(event, xhr, ajaxOptions, thrownError) {
+            if (xhr.status == 403) {
+                window.location.reload();
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a href="/index.html" class="brand">Zero Bank</a>
+
+                <div>
+                    <ul class="nav float-right">
+                        <li>    <form action="/search.html"
+          class="navbar-search pull-right" style="padding-right: 20px">
+        <input type="text" id="searchTerm" name="searchTerm" class="search-query" placeholder="Search"/>
+    </form>
+</li>
+                        <li>
+                            <button id="signin_button" type="button" class="signin btn btn-info">
+                                <i class="icon-signin"></i>Signin
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(function() {
+            var path = "/";
+
+            $("#signin_button").click(function(event) {
+                event.preventDefault();
+                window.location.href = path + "login" + ".html";
+            });
+        });
+    </script>
+
+        <div class="container">
+            <div class="top_offset">
+
+<div class="row">
+    <div class="span12">
+        <h2 class="board-header">Users</h2>
+    </div>
+</div>
+
+<div class="row">
+    <div class="span3 well">
+        <ul class="nav nav-list">
+            <li><a href="/admin/index.html">Home</a></li>
+
+            <li class="divider"></li>
+
+            <li class="active"><a href="/admin/users.html">Users</a></li>
+            <li><a href="/admin/currencies.html">Currencies</a></li>
+        </ul>
+    </div>
+
+    <div class="span8">
+        <div class="board">
+            <div class="board-content">
+                <table class="table">
+                    <col width="40%"/>
+                    <col width="30%"/>
+                    <col width="30%"/>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Password</th>
+                            <th>SSN</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <tr>
+                                <td>
+                                    Leeroy Jenkins
+                                </td>
+                                <td>
+                                    VIZ10AWT8VL
+                                </td>
+                                <td>
+                                    536-48-3769
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Stephen Bowen
+                                </td>
+                                <td>
+                                    OTZ07BXM0BE
+                                </td>
+                                <td>
+                                    607-58-7435
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Linus Moran
+                                </td>
+                                <td>
+                                    FKO04SXA7TI
+                                </td>
+                                <td>
+                                    247-54-1719
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Nero Chan
+                                </td>
+                                <td>
+                                    TXJ77CQO5EI
+                                </td>
+                                <td>
+                                    578-13-3713
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Kadeem Higgins
+                                </td>
+                                <td>
+                                    MFC50OQE7VO
+                                </td>
+                                <td>
+                                    449-20-3206
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Quinn Burks
+                                </td>
+                                <td>
+                                    HWZ97ZUM3NK
+                                </td>
+                                <td>
+                                    008-70-6738
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Davis Thompson
+                                </td>
+                                <td>
+                                    RGD78SHB0TG
+                                </td>
+                                <td>
+                                    574-56-1932
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Lester Keller
+                                </td>
+                                <td>
+                                    EIJ79NLT0TP
+                                </td>
+                                <td>
+                                    330-58-4012
+                                </td>
+                            </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+
+        <div class="clearfix push"></div>
+    </div>
+
+<div class="extra">
+    <div class="extra-inner">
+        <div class="container">
+            <div class="row">
+                <div class="span4">
+                    <ul>
+                        <li><span id="download_webinspect_link">Download WebInspect</span></li>
+                    </ul>
+                </div>
+
+                <div class="span4">
+                    <ul>
+                        <li><span id="terms_of_use_link">Terms of Use</span></li>
+                    </ul>
+                </div>
+
+                <div class="span4">
+                    <ul>
+                        <li><span id="contact_hp_link">Contact HP</span></li>
+                        <li><span id="privacy_statement_link">Privacy Statement</span></li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="disclaimer span12">
+                    The Free Online Bank Web site is published by Hewlett-Packard, Company for the sole purpose of demonstrating
+                    the functionality and effectiveness of Hewlett-Packard Fortify’s WebInspect products in detecting and reporting
+                    Web application vulnerabilities. This site is not a real banking site and any similarities to third party products
+                    and/or Web sites are purely coincidental. This site is provided "as is" without warranty of any kind,
+                    either express or implied. Hewlett-Packard Company does not assume any risk in relation to your use of this Web site.
+                    Use of this Web site indicates that you have read and agree to Hewlett-Packard Company’s Terms of Use found at
+                    <a href="http://www8.hp.com/us/en/privacy/terms-of-use.html" target="_blank">http://www8.hp.com/us/en/privacy/terms-of-use.html</a>
+                    and Hewlett-Packard Company’s Online Privacy Statement found at
+                    <a href="http://www8.hp.com/us/en/privacy/privacy.html" target="_blank">http://www8.hp.com/us/en/privacy/privacy.html</a>.
+
+                    <br/><br/>
+
+                    Copyright © 2012-2013, Hewlett-Packard Development Company. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        var path = "/";
+
+        var attachClickHandler = function(selector, handler) {
+$(".extra").on('click', selector, handler);
+        }
+
+        var footerLinks = {
+            "download_webinspect_link": { absolute: true, page: "https://download.hpsmartupdate.com/webinspect/" },
+            "contact_hp_link" : { absolute: true, page: "https://support.fortify.com" },
+            "privacy_statement_link": { absolute: true, page: "http://www8.hp.com/us/en/privacy/privacy.html" },
+            "terms_of_use_link": { absolute: true, page: "http://www8.hp.com/us/en/privacy/terms-of-use.html" }
+        };
+
+        $.each(footerLinks, function(linkId, link) {
+            attachClickHandler('span[id="' + linkId + '"]', function(event) {
+                event.preventDefault();
+                if (link.absolute) {
+                    window.location.href = link.page;
+                } else {
+                    window.location.href = path + link.page + ".html";
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>
+]]></RawResponse></Issue><Issue><CheckTypeID>Best Practices</CheckTypeID><EngineType>CUSTOM</EngineType><URL>http://zero.webappsecurity.com:80/admin/currencies.html</URL><Scheme>http</Scheme><Host>zero.webappsecurity.com</Host><Port>80</Port><AttackSession null="1" /><VulnerableSession><![CDATA[GET /admin/currencies.html HTTP/1.1
+Referer: http://zero.webappsecurity.com/admin/
+Accept: */*
+Pragma: no-cache
+User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.2.18) Gecko/20110614 Firefox/3.6.18 (.NET CLR 3.5.30729)
+Host: zero.webappsecurity.com
+Connection: Keep-Alive
+X-WIPP: AscVersion=10.1.177.0
+X-Scan-Memo: Category="Crawl"; SID="0CE5ABD84AD968C95357799ACE262859"; PSID="B09C4D5CC22F10C01D9D84418780B93D"; SessionType="Crawl"; CrawlType="HTML"; AttackType="None"; OriginatingEngineID="00000000-0000-0000-0000-000000000000"; Method="CreateStateRequest"; ThreadId="174"; ThreadType="CrawlBreadthFirstDBReader"; 
+X-RequestManager-Memo: StateID="659"; ID="afca0e9b-ea4c-4ace-ae4b-c61bcea1369f"; 
+X-Request-Memo: ID="2b2f1b36-6ba1-453f-adea-b42bef1c9559"; ThreadId="110"; 
+Cookie: CustomCookie=WebInspect90497ZX733C3C9FC85D468A82759DDB55594A61YF788
+
+]]></VulnerableSession><TriggerSession null="1" /><DetectedInSession null="1" /><VulnerabilityID>5597</VulnerabilityID><Severity>0</Severity><Name>Form Auto Complete Active</Name><ReportSection><Name>Summary</Name><SectionText><![CDATA[Most recent browsers have features that will save form field content entered by users and then automatically complete form entry the next time the fields are encountered. This feature is enabled by default and could leak sensitive information since it is stored on the hard drive of the user. The risk of this issue is greatly increased if users are accessing the application from a shared environment. Recommendations include setting autocomplete to "off" on all your forms.]]></SectionText></ReportSection><ReportSection><Name>Implication</Name><SectionText></SectionText></ReportSection><ReportSection><Name>Execution</Name><SectionText></SectionText></ReportSection><ReportSection><Name>Fix</Name><SectionText></SectionText></ReportSection><ReportSection><Name>Reference Info</Name><SectionText><![CDATA[<br /><b>Microsoft:</b><br /><a href="http://msdn.microsoft.com/en-us/library/ms533032(VS.85).aspx#security">Autocomplete Security</a>]]></SectionText></ReportSection><RawResponse><![CDATA[HTTP/1.1 200 OK
+Date: Fri, 20 Dec 2013 19:27:31 GMT
+Server: Apache/2.2.22 (Ubuntu)
+Cache-Control: no-cache, max-age=0, must-revalidate, no-store
+Content-Language: en-US
+Vary: Accept-Encoding
+Content-Type: text/html;charset=UTF-8
+Connection: Keep-Alive
+Content-Length: 10569
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Zero - Admin - Currencies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <link type="text/css" rel="stylesheet" href="/resources/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="/resources/css/font-awesome.css"/>
+    <link type="text/css" rel="stylesheet" href="/resources/css/main.css"/>
+
+    <script src="/resources/js/jquery-1.8.2.min.js"></script>
+        <script src="/resources/js/bootstrap.min.js"></script>
+
+    <script src="/resources/js/placeholders.min.js"></script>
+    <script type="text/javascript">
+        Placeholders.init({
+            live: true, // Apply to future and modified elements too
+            hideOnFocus: true // Hide the placeholder when the element receives focus
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ajaxError(function errorHandler(event, xhr, ajaxOptions, thrownError) {
+            if (xhr.status == 403) {
+                window.location.reload();
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a href="/index.html" class="brand">Zero Bank</a>
+
+                <div>
+                    <ul class="nav float-right">
+                        <li>    <form action="/search.html"
+          class="navbar-search pull-right" style="padding-right: 20px">
+        <input type="text" id="searchTerm" name="searchTerm" class="search-query" placeholder="Search"/>
+    </form>
+</li>
+                        <li>
+                            <button id="signin_button" type="button" class="signin btn btn-info">
+                                <i class="icon-signin"></i>Signin
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(function() {
+            var path = "/";
+
+            $("#signin_button").click(function(event) {
+                event.preventDefault();
+                window.location.href = path + "login" + ".html";
+            });
+        });
+    </script>
+
+        <div class="container">
+            <div class="top_offset">
+
+<div class="row">
+    <div class="span12">
+        <h2 class="board-header">Currencies</h2>
+    </div>
+</div>
+
+<div class="row">
+    <div class="span3 well">
+        <ul class="nav nav-list">
+            <li><a href="/admin/index.html">Home</a></li>
+
+            <li class="divider"></li>
+
+            <li><a href="/admin/users.html">Users</a></li>
+            <li class="active"><a href="/admin/currencies.html">Currencies</a></li>
+        </ul>
+    </div>
+
+    <div class="span8">
+        <div class="board">
+            <div class="board-content">
+                <table class="table">
+                    <col width="20%"/>
+                    <col width="40%"/>
+                    <col width="40%"/>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Country</th>
+                            <th>Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <tr>
+                                <td>AUD</td>
+                                <td>Australia</td>
+                                <td>dollar</td>
+                            </tr>
+                            <tr>
+                                <td>CAD</td>
+                                <td>Canada</td>
+                                <td>dollar</td>
+                            </tr>
+                            <tr>
+                                <td>CHF</td>
+                                <td>Switzerland</td>
+                                <td>franc</td>
+                            </tr>
+                            <tr>
+                                <td>CNY</td>
+                                <td>China</td>
+                                <td>yuan</td>
+                            </tr>
+                            <tr>
+                                <td>DKK</td>
+                                <td>Denmark</td>
+                                <td>krone</td>
+                            </tr>
+                            <tr>
+                                <td>EUR</td>
+                                <td>Eurozone</td>
+                                <td>euro</td>
+                            </tr>
+                            <tr>
+                                <td>GBP</td>
+                                <td>Great Britain</td>
+                                <td>pound</td>
+                            </tr>
+                            <tr>
+                                <td>HKD</td>
+                                <td>Hong Kong</td>
+                                <td>dollar</td>
+                            </tr>
+                            <tr>
+                                <td>JPY</td>
+                                <td>Japan</td>
+                                <td>yen</td>
+                            </tr>
+                            <tr>
+                                <td>MXN</td>
+                                <td>Mexico</td>
+                                <td>peso</td>
+                            </tr>
+                            <tr>
+                                <td>NOK</td>
+                                <td>Norway</td>
+                                <td>krone</td>
+                            </tr>
+                            <tr>
+                                <td>NZD</td>
+                                <td>New Zealand</td>
+                                <td>dollar</td>
+                            </tr>
+                            <tr>
+                                <td>SEK</td>
+                                <td>Sweden</td>
+                                <td>krona</td>
+                            </tr>
+                            <tr>
+                                <td>SGD</td>
+                                <td>Singapore</td>
+                                <td>dollar</td>
+                            </tr>
+                            <tr>
+                                <td>THB</td>
+                                <td>Thailand</td>
+                                <td>baht</td>
+                            </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="pull-right">
+            <a href="/admin/currencies-add.html" class="btn" id="add_currency">Add Currency</a>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+
+        <div class="clearfix push"></div>
+    </div>
+
+<div class="extra">
+    <div class="extra-inner">
+        <div class="container">
+            <div class="row">
+                <div class="span4">
+                    <ul>
+                        <li><span id="download_webinspect_link">Download WebInspect</span></li>
+                    </ul>
+                </div>
+
+                <div class="span4">
+                    <ul>
+                        <li><span id="terms_of_use_link">Terms of Use</span></li>
+                    </ul>
+                </div>
+
+                <div class="span4">
+                    <ul>
+                        <li><span id="contact_hp_link">Contact HP</span></li>
+                        <li><span id="privacy_statement_link">Privacy Statement</span></li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="disclaimer span12">
+                    The Free Online Bank Web site is published by Hewlett-Packard, Company for the sole purpose of demonstrating
+                    the functionality and effectiveness of Hewlett-Packard Fortify’s WebInspect products in detecting and reporting
+                    Web application vulnerabilities. This site is not a real banking site and any similarities to third party products
+                    and/or Web sites are purely coincidental. This site is provided "as is" without warranty of any kind,
+                    either express or implied. Hewlett-Packard Company does not assume any risk in relation to your use of this Web site.
+                    Use of this Web site indicates that you have read and agree to Hewlett-Packard Company’s Terms of Use found at
+                    <a href="http://www8.hp.com/us/en/privacy/terms-of-use.html" target="_blank">http://www8.hp.com/us/en/privacy/terms-of-use.html</a>
+                    and Hewlett-Packard Company’s Online Privacy Statement found at
+                    <a href="http://www8.hp.com/us/en/privacy/privacy.html" target="_blank">http://www8.hp.com/us/en/privacy/privacy.html</a>.
+
+                    <br/><br/>
+
+                    Copyright © 2012-2013, Hewlett-Packard Development Company. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        var path = "/";
+
+        var attachClickHandler = function(selector, handler) {
+$(".extra").on('click', selector, handler);
+        }
+
+        var footerLinks = {
+            "download_webinspect_link": { absolute: true, page: "https://download.hpsmartupdate.com/webinspect/" },
+            "contact_hp_link" : { absolute: true, page: "https://support.fortify.com" },
+            "privacy_statement_link": { absolute: true, page: "http://www8.hp.com/us/en/privacy/privacy.html" },
+            "terms_of_use_link": { absolute: true, page: "http://www8.hp.com/us/en/privacy/terms-of-use.html" }
+        };
+
+        $.each(footerLinks, function(linkId, link) {
+            attachClickHandler('span[id="' + linkId + '"]', function(event) {
+                event.preventDefault();
+                if (link.absolute) {
+                    window.location.href = link.page;
+                } else {
+                    window.location.href = path + link.page + ".html";
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>
+]]></RawResponse></Issue><Issue><CheckTypeID>Best Practices</CheckTypeID><EngineType>CUSTOM</EngineType><URL>http://zero.webappsecurity.com:80/admin/currencies-add.html</URL><Scheme>http</Scheme><Host>zero.webappsecurity.com</Host><Port>80</Port><AttackSession null="1" /><VulnerableSession><![CDATA[GET /admin/currencies-add.html HTTP/1.1
+Referer: http://zero.webappsecurity.com/admin/currencies.html
+Accept: */*
+Pragma: no-cache
+User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.2.18) Gecko/20110614 Firefox/3.6.18 (.NET CLR 3.5.30729)
+Host: zero.webappsecurity.com
+Connection: Keep-Alive
+X-WIPP: AscVersion=10.1.177.0
+X-Scan-Memo: Category="Crawl"; SID="1196B0700885BAA2AD346331C45F4326"; PSID="0CE5ABD84AD968C95357799ACE262859"; SessionType="Crawl"; CrawlType="HTML"; AttackType="None"; OriginatingEngineID="00000000-0000-0000-0000-000000000000"; Method="CreateStateRequest"; ThreadId="176"; ThreadType="CrawlBreadthFirstDBReader"; 
+X-RequestManager-Memo: StateID="659"; ID="04dc4dba-3e43-493d-a1d1-312a8e7b7d67"; 
+X-Request-Memo: ID="38ef1b07-a86e-4371-9ee1-5e7f7497ac63"; ThreadId="110"; 
+Cookie: CustomCookie=WebInspect90497ZX733C3C9FC85D468A82759DDB55594A61YF788
+
+]]></VulnerableSession><TriggerSession null="1" /><DetectedInSession null="1" /><VulnerabilityID>5597</VulnerabilityID><Severity>0</Severity><Name>Form Auto Complete Active</Name><ReportSection><Name>Summary</Name><SectionText><![CDATA[Most recent browsers have features that will save form field content entered by users and then automatically complete form entry the next time the fields are encountered. This feature is enabled by default and could leak sensitive information since it is stored on the hard drive of the user. The risk of this issue is greatly increased if users are accessing the application from a shared environment. Recommendations include setting autocomplete to "off" on all your forms.]]></SectionText></ReportSection><ReportSection><Name>Implication</Name><SectionText></SectionText></ReportSection><ReportSection><Name>Execution</Name><SectionText></SectionText></ReportSection><ReportSection><Name>Fix</Name><SectionText></SectionText></ReportSection><ReportSection><Name>Reference Info</Name><SectionText><![CDATA[<br /><b>Microsoft:</b><br /><a href="http://msdn.microsoft.com/en-us/library/ms533032(VS.85).aspx#security">Autocomplete Security</a>]]></SectionText></ReportSection><RawResponse><![CDATA[HTTP/1.1 200 OK
+Date: Fri, 20 Dec 2013 19:27:35 GMT
+Server: Apache/2.2.22 (Ubuntu)
+Cache-Control: no-cache, max-age=0, must-revalidate, no-store
+Content-Language: en-US
+Vary: Accept-Encoding
+Content-Type: text/html;charset=UTF-8
+Connection: Keep-Alive
+Content-Length: 8561
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Zero - Admin - Currencies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <link type="text/css" rel="stylesheet" href="/resources/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="/resources/css/font-awesome.css"/>
+    <link type="text/css" rel="stylesheet" href="/resources/css/main.css"/>
+
+    <script src="/resources/js/jquery-1.8.2.min.js"></script>
+        <script src="/resources/js/bootstrap.min.js"></script>
+
+    <script src="/resources/js/placeholders.min.js"></script>
+    <script type="text/javascript">
+        Placeholders.init({
+            live: true, // Apply to future and modified elements too
+            hideOnFocus: true // Hide the placeholder when the element receives focus
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ajaxError(function errorHandler(event, xhr, ajaxOptions, thrownError) {
+            if (xhr.status == 403) {
+                window.location.reload();
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a href="/index.html" class="brand">Zero Bank</a>
+
+                <div>
+                    <ul class="nav float-right">
+                        <li>    <form action="/search.html"
+          class="navbar-search pull-right" style="padding-right: 20px">
+        <input type="text" id="searchTerm" name="searchTerm" class="search-query" placeholder="Search"/>
+    </form>
+</li>
+                        <li>
+                            <button id="signin_button" type="button" class="signin btn btn-info">
+                                <i class="icon-signin"></i>Signin
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(function() {
+            var path = "/";
+
+            $("#signin_button").click(function(event) {
+                event.preventDefault();
+                window.location.href = path + "login" + ".html";
+            });
+        });
+    </script>
+
+        <div class="container">
+            <div class="top_offset">
+
+<div class="row">
+    <div class="span12">
+        <h2 class="board-header">Add Currency</h2>
+    </div>
+</div>
+
+<div class="row">
+    <div class="span3 well">
+        <ul class="nav nav-list">
+            <li><a href="/admin/index.html">Home</a></li>
+
+            <li class="divider"></li>
+
+            <li><a href="/admin/users.html">Users</a></li>
+            <li class="active"><a href="/admin/currencies.html">Currencies</a></li>
+        </ul>
+    </div>
+
+    <div class="span8">
+        <form action="/admin/currencies-add.html" method="post" class="form-horizontal">
+            <div class="board">
+                <div class="board-content">
+                    <article>
+                        <fieldset>
+                            <div class="control-group">
+                                <label class="control-label" for="currency_id">ID</label>
+
+                                <div class="controls">
+                                    <input type="text" id="currency_id" name="id"
+                                           class="span1" autocomplete="off" required="required"/>
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <label class="control-label" for="currency_country">Country</label>
+
+                                <div class="controls">
+                                    <input type="text" id="currency_country" name="country"
+                                           class="span3" autocomplete="off" required="required"/>
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <label class="control-label" for="currency_name">Name</label>
+
+                                <div class="controls">
+                                    <input type="text" id="currency_name" name="name"
+                                           class="span3" autocomplete="off" required="required"/>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </article>
+                </div>
+            </div>
+            <div class="pull-right">
+                <button type="submit" class="btn btn-primary" id="add_new_currency">Add</button>
+            </div>
+        </form>
+    </div>
+</div>
+            </div>
+        </div>
+
+        <div class="clearfix push"></div>
+    </div>
+
+<div class="extra">
+    <div class="extra-inner">
+        <div class="container">
+            <div class="row">
+                <div class="span4">
+                    <ul>
+                        <li><span id="download_webinspect_link">Download WebInspect</span></li>
+                    </ul>
+                </div>
+
+                <div class="span4">
+                    <ul>
+                        <li><span id="terms_of_use_link">Terms of Use</span></li>
+                    </ul>
+                </div>
+
+                <div class="span4">
+                    <ul>
+                        <li><span id="contact_hp_link">Contact HP</span></li>
+                        <li><span id="privacy_statement_link">Privacy Statement</span></li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="disclaimer span12">
+                    The Free Online Bank Web site is published by Hewlett-Packard, Company for the sole purpose of demonstrating
+                    the functionality and effectiveness of Hewlett-Packard Fortify’s WebInspect products in detecting and reporting
+                    Web application vulnerabilities. This site is not a real banking site and any similarities to third party products
+                    and/or Web sites are purely coincidental. This site is provided "as is" without warranty of any kind,
+                    either express or implied. Hewlett-Packard Company does not assume any risk in relation to your use of this Web site.
+                    Use of this Web site indicates that you have read and agree to Hewlett-Packard Company’s Terms of Use found at
+                    <a href="http://www8.hp.com/us/en/privacy/terms-of-use.html" target="_blank">http://www8.hp.com/us/en/privacy/terms-of-use.html</a>
+                    and Hewlett-Packard Company’s Online Privacy Statement found at
+                    <a href="http://www8.hp.com/us/en/privacy/privacy.html" target="_blank">http://www8.hp.com/us/en/privacy/privacy.html</a>.
+
+                    <br/><br/>
+
+                    Copyright © 2012-2013, Hewlett-Packard Development Company. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        var path = "/";
+
+        var attachClickHandler = function(selector, handler) {
+$(".extra").on('click', selector, handler);
+        }
+
+        var footerLinks = {
+            "download_webinspect_link": { absolute: true, page: "https://download.hpsmartupdate.com/webinspect/" },
+            "contact_hp_link" : { absolute: true, page: "https://support.fortify.com" },
+            "privacy_statement_link": { absolute: true, page: "http://www8.hp.com/us/en/privacy/privacy.html" },
+            "terms_of_use_link": { absolute: true, page: "http://www8.hp.com/us/en/privacy/terms-of-use.html" }
+        };
+
+        $.each(footerLinks, function(linkId, link) {
+            attachClickHandler('span[id="' + linkId + '"]', function(event) {
+                event.preventDefault();
+                if (link.absolute) {
+                    window.location.href = link.page;
+                } else {
+                    window.location.href = path + link.page + ".html";
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>
+]]></RawResponse></Issue><Issue><CheckTypeID>Best Practices</CheckTypeID><EngineType>CUSTOM</EngineType><URL>http://zero.webappsecurity.com:80/admin/</URL><Scheme>http</Scheme><Host>zero.webappsecurity.com</Host><Port>80</Port><AttackSession null="1" /><VulnerableSession><![CDATA[GET /admin/ HTTP/1.1
+Accept: */*
+Pragma: no-cache
+User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.2.18) Gecko/20110614 Firefox/3.6.18 (.NET CLR 3.5.30729)
+Host: zero.webappsecurity.com
+Connection: Keep-Alive
+X-WIPP: AscVersion=10.1.177.0
+X-Scan-Memo: Category="Crawl"; SID="B09C4D5CC22F10C01D9D84418780B93D"; SessionType="ExternalAddedToCrawl"; CrawlType="None"; AttackType="None"; OriginatingEngineID="00000000-0000-0000-0000-000000000000"; Method="CreateStateRequest"; ThreadId="139"; ThreadType="CrawlBreadthFirstDBReader"; 
+X-RequestManager-Memo: StateID="659"; ID="1e0e1f84-2b10-41b4-a203-4da7a03f8f59"; 
+X-Request-Memo: ID="bfe50c6a-e81a-4b20-9b7f-830b97e58a09"; ThreadId="110"; 
+Cookie: CustomCookie=WebInspect90497ZX733C3C9FC85D468A82759DDB55594A61YF788
+
+]]></VulnerableSession><TriggerSession null="1" /><DetectedInSession null="1" /><VulnerabilityID>5546</VulnerabilityID><Severity>0</Severity><Name>Privacy Policy Not Present</Name><ReportSection><Name>Summary</Name><SectionText><![CDATA[<p>A privacy policy was not supplied by the web application within the scope of this audit. Many legislative initiatives require that organizations place a publicly accessible document within their web application that defines their website’s privacy policy.  As a general rule, these privacy policies must detail what information an organization collects, the purpose for collecting it, potential avenues of disclosure, and methods for addressing potential grievances.</p><p>Various laws governing privacy policies include the Gramm-Leach-Bliley Act, Health Insurance Portability and Accountability Act (HIPAA), the California Online Privacy Protection Act of 2003, European Union's Data Protection Directive and others.</p>]]></SectionText></ReportSection><ReportSection><Name>Implication</Name><SectionText><![CDATA[Most privacy laws are created to protect residents who are users of the website. Hence, organizations from any part of the world must adhere to these laws if they cater to customers residing in these geographical areas. Failing to do so could result in a lawsuit by the corresponding government against the organization.]]></SectionText></ReportSection><ReportSection><Name>Execution</Name><SectionText><![CDATA[<p>All of the web pages accessible within the scope of the scan are sampled for textual content that often constitutes a privacy policy statement. A violation is reported upon completion of the web application crawl without a successful match against any of the web pages.</p><p>Note that the privacy policy of your application could be located on another host or within a section of the site that was not configured as part of the scan. To validate, please try to access the privacy policy of your website and check to see if it was part of the scan.</p><br /><drc_privacy />]]></SectionText></ReportSection><ReportSection><Name>Fix</Name><SectionText><![CDATA[Declare a comprehensive privacy policy for the website, and ensure that it is accessible from every page that seeks personal information from users. To verify the fix, rescan the site in order to discover and audit the newly added resources.
+
+<br /><br /><b>Descriptions: </b><br />
+Any standard web application privacy policy should include the following components:
+<ul><li>A description of the intended purpose for collecting the data.</li><li>A description of the use of the data.</li><li>Methods for limiting the use and disclosure of the information.</li><li>A list of the types of third parties to whom the information might be disclosed.</li><li>Contact information for inquires and complaints.</li></ul>]]></SectionText></ReportSection><ReportSection><Name>Reference Info</Name><SectionText><![CDATA[<b>California Online Privacy Protection Act</b><br /><a href="http://oag.ca.gov/privacy/COPPA">http://oag.ca.gov/privacy/COPPA</a><br /><br /><b>National Conference of State Legislation</b><br /><a href="http://www.ncsl.org/issues-research/telecom/state-laws-related-to-internet-privacy.aspx">http://www.ncsl.org/issues-research/telecom/state-laws-related-to-internet-privacy.aspx</a><br /><br /><b>Gramm-Leach-Bliley Act</b><br /><a href="http://www.gpo.gov/fdsys/pkg/PLAW-106publ102/pdf/PLAW-106publ102.pdf">http://www.gpo.gov/fdsys/pkg/PLAW-106publ102/pdf/PLAW-106publ102.pdf</a><br /><br /><b>Health Insurance Portability and Accountability Act of 1996</b><br /><a href="https://www.cms.gov/Regulations-and-Guidance/HIPAA-Administrative-Simplification/HIPAAGenInfo/downloads/HIPAALaw.pdf">https://www.cms.gov/Regulations-and-Guidance/HIPAA-Administrative-Simplification/HIPAAGenInfo/downloads/HIPAALaw.pdf</a><br /><br /><b>Health Insurance Portability and Accountability Act of 1996</b><br /><a href="http://ec.europa.eu/justice/policies/privacy/docs/guide/guide-ukingdom_en.pdf">http://ec.europa.eu/justice/policies/privacy/docs/guide/guide-ukingdom_en.pdf</a><br /><br />]]></SectionText></ReportSection><RawResponse><![CDATA[HTTP/1.1 200 OK
+Date: Fri, 20 Dec 2013 19:27:05 GMT
+Server: Apache/2.2.22 (Ubuntu)
+Cache-Control: no-cache, max-age=0, must-revalidate, no-store
+Content-Language: en-US
+Vary: Accept-Encoding
+Content-Type: text/html;charset=UTF-8
+Connection: Keep-Alive
+Content-Length: 6602
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Zero - Admin - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <link type="text/css" rel="stylesheet" href="/resources/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="/resources/css/font-awesome.css"/>
+    <link type="text/css" rel="stylesheet" href="/resources/css/main.css"/>
+
+    <script src="/resources/js/jquery-1.8.2.min.js"></script>
+        <script src="/resources/js/bootstrap.min.js"></script>
+
+    <script src="/resources/js/placeholders.min.js"></script>
+    <script type="text/javascript">
+        Placeholders.init({
+            live: true, // Apply to future and modified elements too
+            hideOnFocus: true // Hide the placeholder when the element receives focus
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ajaxError(function errorHandler(event, xhr, ajaxOptions, thrownError) {
+            if (xhr.status == 403) {
+                window.location.reload();
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a href="/index.html" class="brand">Zero Bank</a>
+
+                <div>
+                    <ul class="nav float-right">
+                        <li>    <form action="/search.html"
+          class="navbar-search pull-right" style="padding-right: 20px">
+        <input type="text" id="searchTerm" name="searchTerm" class="search-query" placeholder="Search"/>
+    </form>
+</li>
+                        <li>
+                            <button id="signin_button" type="button" class="signin btn btn-info">
+                                <i class="icon-signin"></i>Signin
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(function() {
+            var path = "/";
+
+            $("#signin_button").click(function(event) {
+                event.preventDefault();
+                window.location.href = path + "login" + ".html";
+            });
+        });
+    </script>
+
+        <div class="container">
+            <div class="top_offset">
+
+<div class="row">
+    <div class="span12">
+        <h2 class="board-header">Admin Home</h2>
+    </div>
+</div>
+
+<div class="row">
+    <div class="span3 well">
+        <ul class="nav nav-list">
+            <li class="active"><a href="/admin/index.html">Home</a></li>
+
+            <li class="divider"></li>
+
+            <li><a href="/admin/users.html">Users</a></li>
+            <li><a href="/admin/currencies.html">Currencies</a></li>
+        </ul>
+    </div>
+
+    <div class="span8"></div>
+</div>
+            </div>
+        </div>
+
+        <div class="clearfix push"></div>
+    </div>
+
+<div class="extra">
+    <div class="extra-inner">
+        <div class="container">
+            <div class="row">
+                <div class="span4">
+                    <ul>
+                        <li><span id="download_webinspect_link">Download WebInspect</span></li>
+                    </ul>
+                </div>
+
+                <div class="span4">
+                    <ul>
+                        <li><span id="terms_of_use_link">Terms of Use</span></li>
+                    </ul>
+                </div>
+
+                <div class="span4">
+                    <ul>
+                        <li><span id="contact_hp_link">Contact HP</span></li>
+                        <li><span id="privacy_statement_link">Privacy Statement</span></li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="disclaimer span12">
+                    The Free Online Bank Web site is published by Hewlett-Packard, Company for the sole purpose of demonstrating
+                    the functionality and effectiveness of Hewlett-Packard Fortify’s WebInspect products in detecting and reporting
+                    Web application vulnerabilities. This site is not a real banking site and any similarities to third party products
+                    and/or Web sites are purely coincidental. This site is provided "as is" without warranty of any kind,
+                    either express or implied. Hewlett-Packard Company does not assume any risk in relation to your use of this Web site.
+                    Use of this Web site indicates that you have read and agree to Hewlett-Packard Company’s Terms of Use found at
+                    <a href="http://www8.hp.com/us/en/privacy/terms-of-use.html" target="_blank">http://www8.hp.com/us/en/privacy/terms-of-use.html</a>
+                    and Hewlett-Packard Company’s Online Privacy Statement found at
+                    <a href="http://www8.hp.com/us/en/privacy/privacy.html" target="_blank">http://www8.hp.com/us/en/privacy/privacy.html</a>.
+
+                    <br/><br/>
+
+                    Copyright © 2012-2013, Hewlett-Packard Development Company. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        var path = "/";
+
+        var attachClickHandler = function(selector, handler) {
+$(".extra").on('click', selector, handler);
+        }
+
+        var footerLinks = {
+            "download_webinspect_link": { absolute: true, page: "https://download.hpsmartupdate.com/webinspect/" },
+            "contact_hp_link" : { absolute: true, page: "https://support.fortify.com" },
+            "privacy_statement_link": { absolute: true, page: "http://www8.hp.com/us/en/privacy/privacy.html" },
+            "terms_of_use_link": { absolute: true, page: "http://www8.hp.com/us/en/privacy/terms-of-use.html" }
+        };
+
+        $.each(footerLinks, function(linkId, link) {
+            attachClickHandler('span[id="' + linkId + '"]', function(event) {
+                event.preventDefault();
+                if (link.absolute) {
+                    window.location.href = link.page;
+                } else {
+                    window.location.href = path + link.page + ".html";
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>
+]]></RawResponse></Issue></Issues></Scan>
