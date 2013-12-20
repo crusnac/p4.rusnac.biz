@@ -1,6 +1,6 @@
 <h1>Web Application Assessment Report Management Platform</h1>
 
-The Web Application Assessment Report Management Platform application is a web application report engine used to generate HTML, CSV, and PDF reports from raw XML files that are generated from the <a href=“http://www8.hp.com/us/en/software-solutions/software.html?compURI=1341991#.UrSh6XnWJpc”>HP WebInspect web application scanner</a>.  
+The Web Application Assessment Report Management Platform application is a web application report engine used to generate HTML, CSV, and PDF reports from raw XML files that are generated from the <a href="http://www8.hp.com/us/en/software-solutions/software.html?compURI=1341991#.UrSh6XnWJpc">HP WebInspect web application scanner</a>.  
 
 HP WebInpsect is a web application vulnerability scanner that produces a XML output. The XML output is a list of vulnerabilities and the details associated to remediate each respective vulnerability.
 
