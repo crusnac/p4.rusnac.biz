@@ -6,7 +6,7 @@ HP WebInpsect is a web application vulnerability scanner that produces a XML out
 
 I developed this project to be used by our users at Xerox Corp.  Our users needed a easy way to view the vulnerabilities in multiple formats.  The current report engine is very basic and only produces a list in PDF which is not very intuitive.
 
-To use the tool, the user (which is only an admin), will be able to upload the report.  The Web Application Assessment Report Management Platform will process the report, take some stats and create an entry into the DB.   Once the report is processed, the admin us is able to share the report link to the general public via the “Request Closure Notice link.”  The report link give the anonymous user the ability to generate multiple formats (Print - HTML non-interactive, PDF, or CSV.)
+To use the tool, the user (which is only an admin), will be able to upload the raw XML output.  The Web Application Assessment Report Management Platform will process the raw XML output, take some stats and create an entry into the DB.   Once the raw XML output is processed, the admin us is able to share a report link to the general public via the “Request Closure Notice link.”  The report link give anonymous users the ability to dynamically view/generate multiple formats (Print - HTML non-interactive, PDF, or CSV.)
 
 There are two sample reports that can be used to demonstrate this concepts:
 
